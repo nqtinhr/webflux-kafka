@@ -1,0 +1,75 @@
+groups:
+  - name: container-alerts
+    rules:
+
+    ## 🔥 1. Container dừng hẳn (ngừng scrape)
+    - alert: ContainerDown
+      expr: up{job="cadvisor"} == 0
+      for: 30s
+      labels:
+        severity: critical
+      annotations:
+        summary: "Container bị down"
+        description: "Prometheus không thể scrape metrics từ cAdvisor."
+
+    ## ⚠️ 2. Container restart quá nhiều (crash loop)
+    - alert: ContainerFrequentRestarts
+      expr: rate(container_start_time_seconds[5m]) > 3
+      for: 1m
+      labels:
+        severity: warning
+      annotations:
+        summary: "Container khởi động lại quá nhiều"
+        description: "Container đang restart hơn 3 lần trong 5 phút gần nhất."
+
+    ## ⚠️ 3. Container dùng quá nhiều CPU (> 80%)
+    - alert: HighContainerCPU
+      expr: rate(container_cpu_usage_seconds_total[2m]) * 100 > 80
+      for: 1m
+      labels:
+        severity: warning
+      annotations:
+        summary: "CPU container cao"
+        description: "Sử dụng CPU trong container vượt ngưỡng 80%."
+
+    ## ⚠️ 4. Container dùng quá nhiều bộ nhớ (> 80%)
+    - alert: HighContainerMemory
+      expr: (container_memory_usage_bytes / container_spec_memory_limit_bytes) > 0.8
+      for: 1m
+      labels:
+        severity: warning
+      annotations:
+        summary: "Memory container cao"
+        description: "Sử dụng bộ nhớ trong container vượt ngưỡng 80%."
+
+    ## 🔥 5. Container không có giới hạn bộ nhớ (có thể gây out-of-memory)
+    - alert: ContainerNoMemoryLimit
+      expr: container_spec_memory_limit_bytes == 0
+      for: 2m
+      labels:
+        severity: critical
+      annotations:
+        summary: "Container không có giới hạn bộ nhớ"
+        description: "Một container không cấu hình giới hạn bộ nhớ."
+
+    ## ⚠️ 6. Disk của host dùng > 90%
+    - alert: DiskUsageHigh
+      expr: (node_filesystem_size_bytes{fstype!~"tmpfs|overlay"} - node_filesystem_free_bytes{fstype!~"tmpfs|overlay"})
+             / node_filesystem_size_bytes{fstype!~"tmpfs|overlay"} > 0.9
+      for: 2m
+      labels:
+        severity: warning
+      annotations:
+        summary: "Disk trên host đầy"
+        description: "Ổ đĩa trên host sử dụng vượt quá 90%."
+
+    ## ⚠️ 7. Docker daemon restart (có thể ảnh hưởng toàn bộ container)
+    - alert: DockerDaemonRestart
+      expr: time() - container_last_seen > 300
+      for: 1m
+      labels:
+        severity: critical
+      annotations:
+        summary: "Docker daemon có thể đã restart"
+        description: "Container không cập nhật metrics trong 5 phút gần nhất."
+

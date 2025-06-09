@@ -2,6 +2,8 @@ package com.syshero.profileservice.controller;
 
 import java.io.InputStream;
 
+
+import org.slf4j.MDC;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -40,7 +42,7 @@ public class ProfileController {
 
     @PostMapping
     public ResponseEntity<Mono<ProfileDTO>> createNewProfile(@RequestBody String requestStr) {
-        // Truyền đường dẫn stream 
+        // Truyền đường dẫn stream
         InputStream inputStream = ProfileController.class.getClassLoader()
                 .getResourceAsStream(Constant.JSON_REQ_CREATE_PROFILE);
         CommonFunction.jsonValidate(inputStream, requestStr);
