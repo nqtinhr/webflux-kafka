@@ -9,6 +9,16 @@
             "projectName": "profileservice",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-AccountserviceApplication<accountservice>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.syshero.accountservice.AccountserviceApplication",
+            "projectName": "accountservice",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
