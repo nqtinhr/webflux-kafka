@@ -9,6 +9,8 @@ services:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_SERVER_ID: 1
       ZOOKEEPER_SERVERS: zoo1:2888:3888
+    networks:
+      - webflux-kafka-network
 
   kafka1:
     image: confluentinc/cp-kafka:7.5.3
@@ -28,6 +30,8 @@ services:
       KAFKA_ALLOW_EVERYONE_IF_NO_ACL_FOUND: "true"
     depends_on:
       - zoo1
+    networks:
+      - webflux-kafka-network
 
   kafka2:
     image: confluentinc/cp-kafka:7.5.3
@@ -47,6 +51,8 @@ services:
       KAFKA_ALLOW_EVERYONE_IF_NO_ACL_FOUND: "true"
     depends_on:
       - zoo1
+    networks:
+      - webflux-kafka-network
 
   kafka3:
     image: confluentinc/cp-kafka:7.5.3
@@ -66,6 +72,8 @@ services:
       KAFKA_ALLOW_EVERYONE_IF_NO_ACL_FOUND: "true"
     depends_on:
       - zoo1
+    networks:
+      - webflux-kafka-network
 
   kafka-ui:
     container_name: kafka-ui
@@ -78,8 +86,13 @@ services:
       KAFKA_CLUSTERS_0_NAME: local
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka1:29092
       KAFKA_CLUSTERS_0_METRICS_PORT: 9997
-      DYNAMIC_CONFIG_ENABLED: 'true'  # not necessary, added for tests
-      KAFKA_CLUSTERS_0_AUDIT_TOPICAUDITENABLED: 'true'
-      KAFKA_CLUSTERS_0_AUDIT_CONSOLEAUDITENABLED: 'true'
+      DYNAMIC_CONFIG_ENABLED: "true" # not necessary, added for tests
+      KAFKA_CLUSTERS_0_AUDIT_TOPICAUDITENABLED: "true"
+      KAFKA_CLUSTERS_0_AUDIT_CONSOLEAUDITENABLED: "true"
+    networks:
+      - webflux-kafka-network
 
+networks:
+  webflux-kafka-network:
+    driver: bridge
 # docker compose -f kafka-deployment.yml -p webflux-kafka-container up -d
