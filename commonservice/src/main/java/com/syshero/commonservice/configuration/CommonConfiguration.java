@@ -21,7 +21,7 @@ public class CommonConfiguration {
     private ReactiveKafkaAppProperties reactiveKafkaAppProperties;
 
     @Bean
-    KafkaSender<String,String> kafkaSender(){
+    KafkaSender<String, String> kafkaSender() {
         Map<String, Object> props = new HashMap<>();
 
         // Địa chỉ Kafka broker
@@ -40,14 +40,14 @@ public class CommonConfiguration {
     }
 
     @Bean
-    ReceiverOptions<String,String> receiverOptions(){
+    ReceiverOptions<String, String> receiverOptions() {
         Map<String, Object> propsReceiver = new HashMap<>();
 
         // Địa chỉ Kafka broker
         propsReceiver.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, reactiveKafkaAppProperties.bootstrapServers);
         // ID của consumer group (để Kafka theo dõi offset của consumer)
         propsReceiver.put(ConsumerConfig.GROUP_ID_CONFIG, reactiveKafkaAppProperties.consumerGroupId);
-        // Cấu hình deserializer cho key và value 
+        // Cấu hình deserializer cho key và value
         propsReceiver.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         propsReceiver.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
 

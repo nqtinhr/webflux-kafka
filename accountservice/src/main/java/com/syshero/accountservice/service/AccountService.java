@@ -23,9 +23,11 @@ public class AccountService {
                 .map(AccountDTO::entityToModel)
                 .doOnError(throwable -> log.error(throwable.getMessage()));
     }
+    
     public Mono<AccountDTO> checkBalance(String id){
         return findById(id);
     }
+
     public Mono<AccountDTO> findById(String id){
         return accountRepository.findById(id)
                 .map(AccountDTO::entityToModel)
@@ -43,6 +45,7 @@ public class AccountService {
                 })
                 .flatMap(account -> Mono.just(true));
     }
+
     public Mono<AccountDTO> subtract(double amount,String accountId){
         return accountRepository.findById(accountId)
                 .switchIfEmpty(Mono.error(new CommonException("A01", "Account not found", HttpStatus.NOT_FOUND)))
@@ -52,6 +55,7 @@ public class AccountService {
                     return accountRepository.save(account);
                 }).map(AccountDTO::entityToModel);
     }
+
     public Mono<AccountDTO> rollbackReserved(double amount, String accountId){
         return accountRepository.findById(accountId)
                 .switchIfEmpty(Mono.error(new CommonException("A01", "Account not found", HttpStatus.NOT_FOUND)))
