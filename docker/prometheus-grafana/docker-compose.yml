@@ -33,19 +33,19 @@ services:
   #   networks:
   #     - monitoring
 
-  alert-manager:
-    image: prom/alertmanager
-    container_name: alertmanager
-    ports:
-      - "9095:9093"
-    volumes:
-      - /etc/timezone:/etc/timezone:ro
-      - /etc/localtime:/etc/localtime:ro
-      - ./alertmanager:/etc/alertmanager
-    command:
-      - --config.file=/etc/alertmanager/alertmanager.yml
-    networks:
-      - monitoring
+  # alert-manager:
+  #   image: prom/alertmanager
+  #   container_name: alertmanager
+  #   ports:
+  #     - "9095:9093"
+  #   volumes:
+  #     - /etc/timezone:/etc/timezone:ro
+  #     - /etc/localtime:/etc/localtime:ro
+  #     - ./alertmanager:/etc/alertmanager
+  #   command:
+  #     - --config.file=/etc/alertmanager/alertmanager.yml
+  #   networks:
+  #     - monitoring
 
   grafana:
     image: grafana/grafana
