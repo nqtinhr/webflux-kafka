@@ -60,24 +60,20 @@ sequenceDiagram
     %% Flow: Account Service processes payment request
     PaymentRequestTopic->>AccountService: Consume
     AccountService->>AccountService: Book amount
-    AccountService->>PaymentCreatedTopic: Book FAILED / Produce
-    AccountService->>PaymentCreatedTopic: Book OK / Produce
+    AccountService-->>PaymentCreatedTopic: Book FAILED / Produce
+    AccountService->>PaymentCompletedTopic: Book OK: Produce
+    PaymentCompletedTopic->>PaymentProcessingService: Consume
+    PaymentProcessingService->>PaymentProcessingService: 3s delay
+    PaymentCompletedTopic->>PaymentService: Consume
+    PaymentService->>PaymentService: Update status (PROCESSING)
+    PaymentProcessingService->>PaymentCreatedTopic: Produce
 
     %% Flow: Payment Service consumes and updates status
     PaymentCreatedTopic->>PaymentService: Consume
-    PaymentService->>PaymentService: Update status (PROCESSING)
-    PaymentService->>PaymentProcessingService: Submit payment
-
-    %% Flow: Payment Processing Service updates and produces result
-    PaymentProcessingService->>PaymentCompletedTopic: Produce
-
-    %% Flow: Payment Service and Account Service consume completion
-    PaymentCompletedTopic->>PaymentService: Consume
-    PaymentCompletedTopic->>AccountService: Consume
-    AccountService->>AccountService: Debit amount
-
-    %% Flow: Final status update
     PaymentService->>PaymentService: Update status (SUCCESSFUL, REJECTED)
+
+    PaymentCreatedTopic->>AccountService: Consume
+    AccountService->>AccountService: Subtract amount
 
     %% Flow: Listing all payments again
     App->>PaymentService: List all Payments (API)

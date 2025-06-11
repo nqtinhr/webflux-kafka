@@ -20,4 +20,4 @@ networks:
   webflux-kafka-network:
     driver: bridge
 
-# docker compose -p webflux-kafka-container up -d
+# docker compose -f database.yml -p webflux-kafka-container up -d

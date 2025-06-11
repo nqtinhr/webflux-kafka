@@ -36,7 +36,7 @@ public class EventConsumer {
         String[] randomStatus = {Constant.STATUS_PAYMENT_REJECTED,Constant.STATUS_PAYMENT_SUCCESSFUL};
         int index = random.nextInt(randomStatus.length);
         paymentDTO.setStatus(randomStatus[index]);
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         eventProducer.sendEvent(Constant.PAYMENT_COMPLETED_TOPIC,gson.toJson(paymentDTO)).subscribe();
     }
 }
