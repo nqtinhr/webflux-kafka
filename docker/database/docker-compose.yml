@@ -9,15 +9,13 @@ services:
       - "3306:3306"
     volumes:
       - ./init:/docker-entrypoint-initdb.d
-      - mysql-data:/var/lib/mysql       
+      - mysql-data:/var/lib/mysql
     networks:
-      - webflux-kafka-network
+      - webflux-kafka
 
 volumes:
   mysql-data:
 
 networks:
-  webflux-kafka-network:
-    driver: bridge
-
-# docker compose -f database.yml -p webflux-kafka-container up -d
+  webflux-kafka:
+    external: true

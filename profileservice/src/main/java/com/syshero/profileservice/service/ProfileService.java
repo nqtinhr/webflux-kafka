@@ -28,6 +28,7 @@ public class ProfileService {
     EventProducer eventProducer;
 
     public Flux<ProfileDTO> getAllProfile() {
+        log.info("Fetching all profiles");
         return profileRepository.findAll()
                 .map(profile -> ProfileDTO.entityToDto(profile))
                 .switchIfEmpty(Mono.error(new CommonException("PF01", "Empty profile list !",

@@ -1,0 +1,28 @@
+# Maven target directory
+target/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# Environment files
+.env
+
+# Docker files
+docker-compose.override.yml
+
+# Node modules (if any frontend)
+node_modules/
+
+# Test reports
+surefire-reports/

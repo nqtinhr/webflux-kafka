@@ -1,0 +1,1835 @@
+2025-06-13T20:27:51.561+07:00  INFO 18848 --- [main] [account-service,,]c.s.a.AccountserviceApplication          : Starting AccountserviceApplication using Java 21.0.7 with PID 18848 (D:\Selftaught\Learn\code\webflux-kafka\accountservice\target\classes started by Admin in D:\Selftaught\Learn\code\webflux-kafka\accountservice)
+2025-06-13T20:27:51.564+07:00  INFO 18848 --- [main] [account-service,,]c.s.a.AccountserviceApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-06-13T20:27:53.366+07:00  INFO 18848 --- [main] [account-service,,].s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2025-06-13T20:27:53.754+07:00  INFO 18848 --- [main] [account-service,,].s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 370 ms. Found 1 R2DBC repository interface.
+2025-06-13T20:27:55.528+07:00  INFO 18848 --- [main] [account-service,,]o.s.cloud.context.scope.GenericScope     : BeanFactory id=ab060dd7-40b5-3b01-ab94-e4476d97274c
+2025-06-13T20:27:58.011+07:00  INFO 18848 --- [main] [account-service,,]o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-accountService-groupId-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = accountService-groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-13T20:27:58.180+07:00  INFO 18848 --- [main] [account-service,,]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-13T20:27:58.496+07:00  INFO 18848 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-13T20:27:58.502+07:00  INFO 18848 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-13T20:27:58.502+07:00  INFO 18848 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1749821278489
+2025-06-13T20:27:58.564+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Subscribed to topic(s): profileOnboarding
+2025-06-13T20:27:58.577+07:00  INFO 18848 --- [main] [account-service,,]o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-accountService-groupId-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = accountService-groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-13T20:27:58.589+07:00  INFO 18848 --- [main] [account-service,,]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-13T20:27:58.608+07:00  INFO 18848 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-13T20:27:58.609+07:00  INFO 18848 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-13T20:27:58.611+07:00  INFO 18848 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1749821278607
+2025-06-13T20:27:58.617+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Subscribed to topic(s): paymentRequest
+2025-06-13T20:27:58.617+07:00  INFO 18848 --- [main] [account-service,,]o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-accountService-groupId-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = accountService-groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-13T20:27:58.635+07:00  INFO 18848 --- [main] [account-service,,]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-13T20:27:58.655+07:00  INFO 18848 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-13T20:27:58.656+07:00  INFO 18848 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-13T20:27:58.657+07:00  INFO 18848 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1749821278655
+2025-06-13T20:27:58.662+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Subscribed to topic(s): paymentCompleted
+2025-06-13T20:27:59.059+07:00  INFO 18848 --- [main] [account-service,,]ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: a8c45462-9ef5-4e76-a46c-d37cb0eb8866
+
+2025-06-13T20:28:00.657+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-3] [account-service,,]org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Cluster ID: eLBgVjImQLy_noKtp_pHYQ
+2025-06-13T20:28:00.657+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-2] [account-service,,]org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Cluster ID: eLBgVjImQLy_noKtp_pHYQ
+2025-06-13T20:28:00.657+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-1] [account-service,,]org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Cluster ID: eLBgVjImQLy_noKtp_pHYQ
+2025-06-13T20:28:00.661+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Discovered group coordinator 127.0.0.1:9092 (id: 2147483646 rack: null)
+2025-06-13T20:28:00.665+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Discovered group coordinator 127.0.0.1:9092 (id: 2147483646 rack: null)
+2025-06-13T20:28:00.664+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Discovered group coordinator 127.0.0.1:9092 (id: 2147483646 rack: null)
+2025-06-13T20:28:00.670+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T20:28:00.673+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T20:28:00.675+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T20:28:00.741+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Request joining group due to: need to re-join with the given member-id: consumer-accountService-groupId-2-3840f793-f5f6-41b7-9f00-a438f1c1cc89
+2025-06-13T20:28:00.741+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Request joining group due to: need to re-join with the given member-id: consumer-accountService-groupId-3-32bf41d6-a109-4ddd-ad30-e48b3a75dc32
+2025-06-13T20:28:00.742+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Request joining group due to: need to re-join with the given member-id: consumer-accountService-groupId-1-4e02d952-d8da-464c-b18b-1dfce6b9dff8
+2025-06-13T20:28:00.743+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T20:28:00.744+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T20:28:00.747+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T20:28:04.065+07:00  INFO 18848 --- [main] [account-service,,]o.s.b.a.e.web.EndpointLinksResolver      : Exposing 28 endpoints beneath base path '/actuator'
+2025-06-13T20:28:06.766+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Successfully joined group with generation Generation{generationId=1, memberId='consumer-accountService-groupId-1-4e02d952-d8da-464c-b18b-1dfce6b9dff8', protocol='range'}
+2025-06-13T20:28:06.774+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Successfully joined group with generation Generation{generationId=1, memberId='consumer-accountService-groupId-2-3840f793-f5f6-41b7-9f00-a438f1c1cc89', protocol='range'}
+2025-06-13T20:28:06.775+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Successfully joined group with generation Generation{generationId=1, memberId='consumer-accountService-groupId-3-32bf41d6-a109-4ddd-ad30-e48b3a75dc32', protocol='range'}
+2025-06-13T20:28:06.891+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Finished assignment for group at generation 1: {consumer-accountService-groupId-2-3840f793-f5f6-41b7-9f00-a438f1c1cc89=Assignment(partitions=[paymentRequest-0]), consumer-accountService-groupId-1-4e02d952-d8da-464c-b18b-1dfce6b9dff8=Assignment(partitions=[profileOnboarding-0]), consumer-accountService-groupId-3-32bf41d6-a109-4ddd-ad30-e48b3a75dc32=Assignment(partitions=[paymentCompleted-0])}
+2025-06-13T20:28:06.956+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Successfully synced group in generation Generation{generationId=1, memberId='consumer-accountService-groupId-1-4e02d952-d8da-464c-b18b-1dfce6b9dff8', protocol='range'}
+2025-06-13T20:28:06.956+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Successfully synced group in generation Generation{generationId=1, memberId='consumer-accountService-groupId-3-32bf41d6-a109-4ddd-ad30-e48b3a75dc32', protocol='range'}
+2025-06-13T20:28:06.956+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Successfully synced group in generation Generation{generationId=1, memberId='consumer-accountService-groupId-2-3840f793-f5f6-41b7-9f00-a438f1c1cc89', protocol='range'}
+2025-06-13T20:28:06.958+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Notifying assignor about the new Assignment(partitions=[profileOnboarding-0])
+2025-06-13T20:28:06.959+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Notifying assignor about the new Assignment(partitions=[paymentCompleted-0])
+2025-06-13T20:28:06.960+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Notifying assignor about the new Assignment(partitions=[paymentRequest-0])
+2025-06-13T20:28:06.968+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-2] [account-service,,]k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Adding newly assigned partitions: paymentRequest-0
+2025-06-13T20:28:06.966+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-1] [account-service,,]k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Adding newly assigned partitions: profileOnboarding-0
+2025-06-13T20:28:06.966+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-3] [account-service,,]k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Adding newly assigned partitions: paymentCompleted-0
+2025-06-13T20:28:06.991+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Found no committed offset for partition paymentCompleted-0
+2025-06-13T20:28:06.991+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Found no committed offset for partition paymentRequest-0
+2025-06-13T20:28:06.993+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Found no committed offset for partition profileOnboarding-0
+2025-06-13T20:28:07.023+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Resetting offset for partition paymentCompleted-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+2025-06-13T20:28:07.263+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Resetting offset for partition profileOnboarding-0 to position FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9093 (id: 2 rack: null)], epoch=0}}.
+2025-06-13T20:28:07.268+07:00  INFO 18848 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Resetting offset for partition paymentRequest-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9093 (id: 2 rack: null)], epoch=0}}.
+2025-06-13T20:28:07.785+07:00  INFO 18848 --- [main] [account-service,,]liquibase.changelog                      : Reading from accountdb.DATABASECHANGELOG
+2025-06-13T20:28:07.956+07:00  INFO 18848 --- [main] [account-service,,]liquibase.lockservice                    : Successfully acquired change log lock
+2025-06-13T20:28:07.960+07:00  INFO 18848 --- [main] [account-service,,]liquibase.command                        : Using deploymentId: 9821285213
+2025-06-13T20:28:07.966+07:00  INFO 18848 --- [main] [account-service,,]liquibase.changelog                      : Reading from accountdb.DATABASECHANGELOG
+2025-06-13T20:28:07.979+07:00  INFO 18848 --- [main] [account-service,,]liquibase.ui                             : Running Changeset: db/changelog/account-changelog-create.xml::create-table-account::account
+2025-06-13T20:28:07.993+07:00  INFO 18848 --- [main] [account-service,,]liquibase.changelog                      : Continuing past: db/changelog/account-changelog-create.xml::create-table-account::account despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : table account already exists
+
+2025-06-13T20:28:08.012+07:00  INFO 18848 --- [main] [account-service,,]liquibase.util                           : UPDATE SUMMARY
+2025-06-13T20:28:08.013+07:00  INFO 18848 --- [main] [account-service,,]liquibase.util                           : Run:                          1
+2025-06-13T20:28:08.013+07:00  INFO 18848 --- [main] [account-service,,]liquibase.util                           : Previously run:               5
+2025-06-13T20:28:08.013+07:00  INFO 18848 --- [main] [account-service,,]liquibase.util                           : Filtered out:                 0
+2025-06-13T20:28:08.014+07:00  INFO 18848 --- [main] [account-service,,]liquibase.util                           : -------------------------------
+2025-06-13T20:28:08.014+07:00  INFO 18848 --- [main] [account-service,,]liquibase.util                           : Total change sets:            6
+2025-06-13T20:28:08.015+07:00  INFO 18848 --- [main] [account-service,,]liquibase.util                           : Update summary generated
+2025-06-13T20:28:08.023+07:00  INFO 18848 --- [main] [account-service,,]liquibase.command                        : Update command completed successfully.
+2025-06-13T20:28:08.024+07:00  INFO 18848 --- [main] [account-service,,]liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 0
+2025-06-13T20:28:08.037+07:00  INFO 18848 --- [main] [account-service,,]liquibase.lockservice                    : Successfully released change log lock
+2025-06-13T20:28:08.040+07:00  INFO 18848 --- [main] [account-service,,]liquibase.command                        : Command execution complete
+2025-06-13T20:28:10.004+07:00  INFO 18848 --- [main] [account-service,,]o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 9211 (http)
+2025-06-13T20:28:10.022+07:00  INFO 18848 --- [main] [account-service,,]c.s.a.AccountserviceApplication          : Started AccountserviceApplication in 19.329 seconds (process running for 20.531)
+2025-06-13T20:30:15.082+07:00  INFO 6608 --- [main] [account-service,,]c.s.a.AccountserviceApplication          : Starting AccountserviceApplication using Java 21.0.7 with PID 6608 (D:\Selftaught\Learn\code\webflux-kafka\accountservice\target\classes started by Admin in D:\Selftaught\Learn\code\webflux-kafka\accountservice)
+2025-06-13T20:30:15.090+07:00  INFO 6608 --- [main] [account-service,,]c.s.a.AccountserviceApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-06-13T20:30:16.553+07:00  INFO 6608 --- [main] [account-service,,].s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2025-06-13T20:30:16.792+07:00  INFO 6608 --- [main] [account-service,,].s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 228 ms. Found 1 R2DBC repository interface.
+2025-06-13T20:30:18.334+07:00  INFO 6608 --- [main] [account-service,,]o.s.cloud.context.scope.GenericScope     : BeanFactory id=ab060dd7-40b5-3b01-ab94-e4476d97274c
+2025-06-13T20:30:21.597+07:00  INFO 6608 --- [main] [account-service,,]o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-accountService-groupId-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = accountService-groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-13T20:30:21.780+07:00  INFO 6608 --- [main] [account-service,,]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-13T20:30:22.027+07:00  INFO 6608 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-13T20:30:22.036+07:00  INFO 6608 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-13T20:30:22.039+07:00  INFO 6608 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1749821422022
+2025-06-13T20:30:22.083+07:00  INFO 6608 --- [main] [account-service,,]o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-accountService-groupId-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = accountService-groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-13T20:30:22.090+07:00  INFO 6608 --- [main] [account-service,,]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-13T20:30:22.107+07:00  INFO 6608 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-13T20:30:22.108+07:00  INFO 6608 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-13T20:30:22.109+07:00  INFO 6608 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1749821422107
+2025-06-13T20:30:22.113+07:00  INFO 6608 --- [main] [account-service,,]o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-accountService-groupId-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = accountService-groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-13T20:30:22.129+07:00  INFO 6608 --- [main] [account-service,,]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-13T20:30:22.134+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Subscribed to topic(s): paymentRequest
+2025-06-13T20:30:22.154+07:00  INFO 6608 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-13T20:30:22.155+07:00  INFO 6608 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-13T20:30:22.155+07:00  INFO 6608 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1749821422154
+2025-06-13T20:30:23.801+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Subscribed to topic(s): paymentCompleted
+2025-06-13T20:30:23.801+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Subscribed to topic(s): profileOnboarding
+2025-06-13T20:30:25.848+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-2] [account-service,,]org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Cluster ID: eLBgVjImQLy_noKtp_pHYQ
+2025-06-13T20:30:25.850+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Discovered group coordinator 127.0.0.1:9092 (id: 2147483646 rack: null)
+2025-06-13T20:30:25.858+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T20:30:25.854+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-1] [account-service,,]org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Cluster ID: eLBgVjImQLy_noKtp_pHYQ
+2025-06-13T20:30:25.854+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-3] [account-service,,]org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Cluster ID: eLBgVjImQLy_noKtp_pHYQ
+2025-06-13T20:30:25.862+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Discovered group coordinator 127.0.0.1:9092 (id: 2147483646 rack: null)
+2025-06-13T20:30:25.863+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Discovered group coordinator 127.0.0.1:9092 (id: 2147483646 rack: null)
+2025-06-13T20:30:25.868+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T20:30:25.871+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T20:30:26.071+07:00  INFO 6608 --- [main] [account-service,,]ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ffaa56e1-16cf-48c1-9b90-3209912000b9
+
+2025-06-13T20:30:26.416+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Request joining group due to: need to re-join with the given member-id: consumer-accountService-groupId-2-b99bf3dc-7ec2-46fa-a3b2-a8adb32b583b
+2025-06-13T20:30:26.416+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Request joining group due to: need to re-join with the given member-id: consumer-accountService-groupId-3-f58eb537-6563-4704-bcd9-94c112ff5d1b
+2025-06-13T20:30:26.418+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T20:30:26.420+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T20:30:26.473+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Request joining group due to: need to re-join with the given member-id: consumer-accountService-groupId-1-fa5b2b18-501a-4887-ac88-898d82c10868
+2025-06-13T20:30:26.491+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T20:30:29.472+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Successfully joined group with generation Generation{generationId=3, memberId='consumer-accountService-groupId-2-b99bf3dc-7ec2-46fa-a3b2-a8adb32b583b', protocol='range'}
+2025-06-13T20:30:29.544+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Successfully joined group with generation Generation{generationId=3, memberId='consumer-accountService-groupId-3-f58eb537-6563-4704-bcd9-94c112ff5d1b', protocol='range'}
+2025-06-13T20:30:29.582+07:00  INFO 6608 --- [main] [account-service,,]o.s.b.a.e.web.EndpointLinksResolver      : Exposing 28 endpoints beneath base path '/actuator'
+2025-06-13T20:30:29.533+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Successfully joined group with generation Generation{generationId=3, memberId='consumer-accountService-groupId-1-fa5b2b18-501a-4887-ac88-898d82c10868', protocol='range'}
+2025-06-13T20:30:29.624+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Finished assignment for group at generation 3: {consumer-accountService-groupId-2-b99bf3dc-7ec2-46fa-a3b2-a8adb32b583b=Assignment(partitions=[paymentRequest-0]), consumer-accountService-groupId-3-f58eb537-6563-4704-bcd9-94c112ff5d1b=Assignment(partitions=[paymentCompleted-0]), consumer-accountService-groupId-1-fa5b2b18-501a-4887-ac88-898d82c10868=Assignment(partitions=[profileOnboarding-0])}
+2025-06-13T20:30:29.638+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Successfully synced group in generation Generation{generationId=3, memberId='consumer-accountService-groupId-2-b99bf3dc-7ec2-46fa-a3b2-a8adb32b583b', protocol='range'}
+2025-06-13T20:30:29.639+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Successfully synced group in generation Generation{generationId=3, memberId='consumer-accountService-groupId-3-f58eb537-6563-4704-bcd9-94c112ff5d1b', protocol='range'}
+2025-06-13T20:30:29.641+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Notifying assignor about the new Assignment(partitions=[paymentRequest-0])
+2025-06-13T20:30:29.645+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Notifying assignor about the new Assignment(partitions=[paymentCompleted-0])
+2025-06-13T20:30:29.650+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-2] [account-service,,]k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Adding newly assigned partitions: paymentRequest-0
+2025-06-13T20:30:29.650+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-3] [account-service,,]k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Adding newly assigned partitions: paymentCompleted-0
+2025-06-13T20:30:29.664+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Found no committed offset for partition paymentRequest-0
+2025-06-13T20:30:29.666+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Found no committed offset for partition paymentCompleted-0
+2025-06-13T20:30:29.679+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Resetting offset for partition paymentRequest-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9093 (id: 2 rack: null)], epoch=0}}.
+2025-06-13T20:30:29.729+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Resetting offset for partition paymentCompleted-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+2025-06-13T20:30:29.750+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Successfully synced group in generation Generation{generationId=3, memberId='consumer-accountService-groupId-1-fa5b2b18-501a-4887-ac88-898d82c10868', protocol='range'}
+2025-06-13T20:30:29.797+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Notifying assignor about the new Assignment(partitions=[profileOnboarding-0])
+2025-06-13T20:30:29.873+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-1] [account-service,,]k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Adding newly assigned partitions: profileOnboarding-0
+2025-06-13T20:30:29.942+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Found no committed offset for partition profileOnboarding-0
+2025-06-13T20:30:30.010+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Resetting offset for partition profileOnboarding-0 to position FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9093 (id: 2 rack: null)], epoch=0}}.
+2025-06-13T20:30:33.841+07:00  INFO 6608 --- [main] [account-service,,]liquibase.changelog                      : Reading from accountdb.DATABASECHANGELOG
+2025-06-13T20:30:34.788+07:00  INFO 6608 --- [main] [account-service,,]liquibase.lockservice                    : Successfully acquired change log lock
+2025-06-13T20:30:34.808+07:00  INFO 6608 --- [main] [account-service,,]liquibase.command                        : Using deploymentId: 9821430529
+2025-06-13T20:30:34.837+07:00  INFO 6608 --- [main] [account-service,,]liquibase.changelog                      : Reading from accountdb.DATABASECHANGELOG
+2025-06-13T20:30:34.858+07:00  INFO 6608 --- [main] [account-service,,]liquibase.ui                             : Running Changeset: db/changelog/account-changelog-create.xml::create-table-account::account
+2025-06-13T20:30:34.958+07:00  INFO 6608 --- [main] [account-service,,]liquibase.changelog                      : Continuing past: db/changelog/account-changelog-create.xml::create-table-account::account despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : table account already exists
+
+2025-06-13T20:30:35.017+07:00  INFO 6608 --- [main] [account-service,,]liquibase.util                           : UPDATE SUMMARY
+2025-06-13T20:30:35.019+07:00  INFO 6608 --- [main] [account-service,,]liquibase.util                           : Run:                          1
+2025-06-13T20:30:35.026+07:00  INFO 6608 --- [main] [account-service,,]liquibase.util                           : Previously run:               5
+2025-06-13T20:30:35.026+07:00  INFO 6608 --- [main] [account-service,,]liquibase.util                           : Filtered out:                 0
+2025-06-13T20:30:35.027+07:00  INFO 6608 --- [main] [account-service,,]liquibase.util                           : -------------------------------
+2025-06-13T20:30:35.028+07:00  INFO 6608 --- [main] [account-service,,]liquibase.util                           : Total change sets:            6
+2025-06-13T20:30:35.030+07:00  INFO 6608 --- [main] [account-service,,]liquibase.util                           : Update summary generated
+2025-06-13T20:30:35.036+07:00  INFO 6608 --- [main] [account-service,,]liquibase.command                        : Update command completed successfully.
+2025-06-13T20:30:35.038+07:00  INFO 6608 --- [main] [account-service,,]liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 0
+2025-06-13T20:30:35.430+07:00  INFO 6608 --- [main] [account-service,,]liquibase.lockservice                    : Successfully released change log lock
+2025-06-13T20:30:35.555+07:00  INFO 6608 --- [main] [account-service,,]liquibase.command                        : Command execution complete
+2025-06-13T20:30:38.134+07:00  INFO 6608 --- [main] [account-service,,]o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 9211 (http)
+2025-06-13T20:30:38.201+07:00  INFO 6608 --- [main] [account-service,,]c.s.a.AccountserviceApplication          : Started AccountserviceApplication in 23.974 seconds (process running for 25.179)
+2025-06-13T20:30:59.379+07:00  INFO 6608 --- [reactive-kafka-accountService-groupId-1] [account-service,,]c.s.accountservice.event.EventConsumer   : Profile Onboarding event
+2025-06-13T20:31:00.086+07:00  INFO 6608 --- [reactor-tcp-nio-2] [account-service,,]o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-06-13T20:31:00.113+07:00  INFO 6608 --- [reactor-tcp-nio-2] [account-service,,]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-13T20:31:00.154+07:00  INFO 6608 --- [reactor-tcp-nio-2] [account-service,,]o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-06-13T20:31:00.188+07:00  INFO 6608 --- [reactor-tcp-nio-2] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-13T20:31:00.190+07:00  INFO 6608 --- [reactor-tcp-nio-2] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-13T20:31:00.191+07:00  INFO 6608 --- [reactor-tcp-nio-2] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1749821460188
+2025-06-13T20:31:00.232+07:00  INFO 6608 --- [kafka-producer-network-thread | producer-1] [account-service,,]org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: eLBgVjImQLy_noKtp_pHYQ
+2025-06-13T20:31:00.232+07:00  INFO 6608 --- [kafka-producer-network-thread | producer-1] [account-service,,]o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 1 with epoch 0
+2025-06-13T20:38:24.715+07:00  INFO 18124 --- [main] [                                                 ] c.s.a.AccountserviceApplication          : Starting AccountserviceApplication using Java 21.0.7 with PID 18124 (D:\Selftaught\Learn\code\webflux-kafka\accountservice\target\classes started by Admin in D:\Selftaught\Learn\code\webflux-kafka\accountservice)
+2025-06-13T20:38:24.722+07:00  INFO 18124 --- [main] [                                                 ] c.s.a.AccountserviceApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-06-13T20:38:26.267+07:00  INFO 18124 --- [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2025-06-13T20:38:26.501+07:00  INFO 18124 --- [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 221 ms. Found 1 R2DBC repository interface.
+2025-06-13T20:38:28.026+07:00  INFO 18124 --- [main] [                                                 ] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ab060dd7-40b5-3b01-ab94-e4476d97274c
+2025-06-13T20:38:31.223+07:00  INFO 18124 --- [main] [                                                 ] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-accountService-groupId-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = accountService-groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-13T20:38:31.319+07:00  INFO 18124 --- [main] [                                                 ] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-13T20:38:31.540+07:00  INFO 18124 --- [main] [                                                 ] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-13T20:38:31.544+07:00  INFO 18124 --- [main] [                                                 ] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-13T20:38:31.544+07:00  INFO 18124 --- [main] [                                                 ] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1749821911538
+2025-06-13T20:38:31.593+07:00  INFO 18124 --- [main] [                                                 ] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-accountService-groupId-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = accountService-groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-13T20:38:31.595+07:00  INFO 18124 --- [main] [                                                 ] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-13T20:38:31.606+07:00  INFO 18124 --- [main] [                                                 ] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-13T20:38:31.607+07:00  INFO 18124 --- [main] [                                                 ] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-13T20:38:31.608+07:00  INFO 18124 --- [main] [                                                 ] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1749821911606
+2025-06-13T20:38:31.611+07:00  INFO 18124 --- [main] [                                                 ] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-accountService-groupId-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = accountService-groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-13T20:38:31.612+07:00  INFO 18124 --- [main] [                                                 ] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-13T20:38:31.613+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-2] [                                                 ] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Subscribed to topic(s): paymentRequest
+2025-06-13T20:38:31.623+07:00  INFO 18124 --- [main] [                                                 ] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-13T20:38:31.624+07:00  INFO 18124 --- [main] [                                                 ] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-13T20:38:31.626+07:00  INFO 18124 --- [main] [                                                 ] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1749821911623
+2025-06-13T20:38:31.653+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-1] [                                                 ] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Subscribed to topic(s): profileOnboarding
+2025-06-13T20:38:31.725+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-3] [                                                 ] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Subscribed to topic(s): paymentCompleted
+2025-06-13T20:38:31.930+07:00  INFO 18124 --- [main] [                                                 ] ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 8e8baff0-4a9d-4a80-85d0-90153f9a384e
+
+2025-06-13T20:38:33.325+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-1] [                                                 ] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Cluster ID: eLBgVjImQLy_noKtp_pHYQ
+2025-06-13T20:38:33.325+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-2] [                                                 ] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Cluster ID: eLBgVjImQLy_noKtp_pHYQ
+2025-06-13T20:38:33.349+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-2] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Discovered group coordinator 127.0.0.1:9092 (id: 2147483646 rack: null)
+2025-06-13T20:38:33.397+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-2] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T20:38:33.325+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-3] [                                                 ] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Cluster ID: eLBgVjImQLy_noKtp_pHYQ
+2025-06-13T20:38:33.346+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-1] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Discovered group coordinator 127.0.0.1:9092 (id: 2147483646 rack: null)
+2025-06-13T20:38:33.414+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-3] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Discovered group coordinator 127.0.0.1:9092 (id: 2147483646 rack: null)
+2025-06-13T20:38:33.418+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-1] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T20:38:33.455+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-3] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T20:38:33.601+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-2] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Request joining group due to: need to re-join with the given member-id: consumer-accountService-groupId-2-c74a38a9-ff4a-4232-bd4b-bc1501ba9770
+2025-06-13T20:38:33.602+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-2] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T20:38:33.601+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-1] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Request joining group due to: need to re-join with the given member-id: consumer-accountService-groupId-1-b54a0644-de7c-4c00-9cd0-cc2e2b53c574
+2025-06-13T20:38:33.602+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-3] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Request joining group due to: need to re-join with the given member-id: consumer-accountService-groupId-3-7283d90f-2d50-4a62-bed7-8f56a84960fa
+2025-06-13T20:38:33.610+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-1] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T20:38:33.614+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-3] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T20:38:37.606+07:00  INFO 18124 --- [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 28 endpoints beneath base path '/actuator'
+2025-06-13T20:38:41.913+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-3] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Successfully joined group with generation Generation{generationId=1, memberId='consumer-accountService-groupId-3-7283d90f-2d50-4a62-bed7-8f56a84960fa', protocol='range'}
+2025-06-13T20:38:41.913+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-2] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Successfully joined group with generation Generation{generationId=1, memberId='consumer-accountService-groupId-2-c74a38a9-ff4a-4232-bd4b-bc1501ba9770', protocol='range'}
+2025-06-13T20:38:41.913+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-1] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Successfully joined group with generation Generation{generationId=1, memberId='consumer-accountService-groupId-1-b54a0644-de7c-4c00-9cd0-cc2e2b53c574', protocol='range'}
+2025-06-13T20:38:42.551+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-2] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Finished assignment for group at generation 1: {consumer-accountService-groupId-3-7283d90f-2d50-4a62-bed7-8f56a84960fa=Assignment(partitions=[paymentCompleted-0]), consumer-accountService-groupId-2-c74a38a9-ff4a-4232-bd4b-bc1501ba9770=Assignment(partitions=[paymentRequest-0]), consumer-accountService-groupId-1-b54a0644-de7c-4c00-9cd0-cc2e2b53c574=Assignment(partitions=[profileOnboarding-0])}
+2025-06-13T20:38:42.807+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-2] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Successfully synced group in generation Generation{generationId=1, memberId='consumer-accountService-groupId-2-c74a38a9-ff4a-4232-bd4b-bc1501ba9770', protocol='range'}
+2025-06-13T20:38:42.809+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-2] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Notifying assignor about the new Assignment(partitions=[paymentRequest-0])
+2025-06-13T20:38:42.821+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-2] [                                                 ] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Adding newly assigned partitions: paymentRequest-0
+2025-06-13T20:38:42.895+07:00  INFO 18124 --- [kafka-coordinator-heartbeat-thread | accountService-groupId] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Successfully synced group in generation Generation{generationId=1, memberId='consumer-accountService-groupId-1-b54a0644-de7c-4c00-9cd0-cc2e2b53c574', protocol='range'}
+2025-06-13T20:38:42.969+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-1] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Notifying assignor about the new Assignment(partitions=[profileOnboarding-0])
+2025-06-13T20:38:42.984+07:00  INFO 18124 --- [kafka-coordinator-heartbeat-thread | accountService-groupId] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Found no committed offset for partition paymentRequest-0
+2025-06-13T20:38:42.897+07:00  INFO 18124 --- [kafka-coordinator-heartbeat-thread | accountService-groupId] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Successfully synced group in generation Generation{generationId=1, memberId='consumer-accountService-groupId-3-7283d90f-2d50-4a62-bed7-8f56a84960fa', protocol='range'}
+2025-06-13T20:38:43.088+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-1] [                                                 ] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Adding newly assigned partitions: profileOnboarding-0
+2025-06-13T20:38:43.091+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-3] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Notifying assignor about the new Assignment(partitions=[paymentCompleted-0])
+2025-06-13T20:38:43.093+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-3] [                                                 ] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Adding newly assigned partitions: paymentCompleted-0
+2025-06-13T20:38:43.141+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-1] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Found no committed offset for partition profileOnboarding-0
+2025-06-13T20:38:43.142+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-2] [                                                 ] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Resetting offset for partition paymentRequest-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9093 (id: 2 rack: null)], epoch=0}}.
+2025-06-13T20:38:43.164+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-3] [                                                 ] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Found no committed offset for partition paymentCompleted-0
+2025-06-13T20:38:43.582+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-1] [                                                 ] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Resetting offset for partition profileOnboarding-0 to position FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9093 (id: 2 rack: null)], epoch=0}}.
+2025-06-13T20:38:43.907+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-3] [                                                 ] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Resetting offset for partition paymentCompleted-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+2025-06-13T20:38:47.185+07:00  INFO 18124 --- [main] [                                                 ] liquibase.changelog                      : Reading from accountdb.DATABASECHANGELOG
+2025-06-13T20:38:48.014+07:00  INFO 18124 --- [main] [                                                 ] liquibase.lockservice                    : Successfully acquired change log lock
+2025-06-13T20:38:48.039+07:00  INFO 18124 --- [main] [                                                 ] liquibase.command                        : Using deploymentId: 9821918628
+2025-06-13T20:38:48.052+07:00  INFO 18124 --- [main] [                                                 ] liquibase.changelog                      : Reading from accountdb.DATABASECHANGELOG
+2025-06-13T20:38:48.112+07:00  INFO 18124 --- [main] [                                                 ] liquibase.ui                             : Running Changeset: db/changelog/account-changelog-create.xml::create-table-account::account
+2025-06-13T20:38:48.195+07:00  INFO 18124 --- [main] [                                                 ] liquibase.changelog                      : Continuing past: db/changelog/account-changelog-create.xml::create-table-account::account despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : table account already exists
+
+2025-06-13T20:38:48.260+07:00  INFO 18124 --- [main] [                                                 ] liquibase.util                           : UPDATE SUMMARY
+2025-06-13T20:38:48.261+07:00  INFO 18124 --- [main] [                                                 ] liquibase.util                           : Run:                          1
+2025-06-13T20:38:48.261+07:00  INFO 18124 --- [main] [                                                 ] liquibase.util                           : Previously run:               5
+2025-06-13T20:38:48.262+07:00  INFO 18124 --- [main] [                                                 ] liquibase.util                           : Filtered out:                 0
+2025-06-13T20:38:48.263+07:00  INFO 18124 --- [main] [                                                 ] liquibase.util                           : -------------------------------
+2025-06-13T20:38:48.264+07:00  INFO 18124 --- [main] [                                                 ] liquibase.util                           : Total change sets:            6
+2025-06-13T20:38:48.266+07:00  INFO 18124 --- [main] [                                                 ] liquibase.util                           : Update summary generated
+2025-06-13T20:38:48.273+07:00  INFO 18124 --- [main] [                                                 ] liquibase.command                        : Update command completed successfully.
+2025-06-13T20:38:48.276+07:00  INFO 18124 --- [main] [                                                 ] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 0
+2025-06-13T20:38:48.555+07:00  INFO 18124 --- [main] [                                                 ] liquibase.lockservice                    : Successfully released change log lock
+2025-06-13T20:38:48.570+07:00  INFO 18124 --- [main] [                                                 ] liquibase.command                        : Command execution complete
+2025-06-13T20:38:51.638+07:00  INFO 18124 --- [main] [                                                 ] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 9211 (http)
+2025-06-13T20:38:51.652+07:00  INFO 18124 --- [main] [                                                 ] c.s.a.AccountserviceApplication          : Started AccountserviceApplication in 27.934 seconds (process running for 29.708)
+2025-06-13T20:39:50.261+07:00  INFO 18124 --- [reactive-kafka-accountService-groupId-1] [                                                 ] c.s.accountservice.event.EventConsumer   : Profile Onboarding event
+2025-06-13T20:39:51.251+07:00  INFO 18124 --- [reactor-tcp-nio-2] [                                                 ] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-06-13T20:39:51.254+07:00  INFO 18124 --- [reactor-tcp-nio-2] [                                                 ] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-13T20:39:51.277+07:00  INFO 18124 --- [reactor-tcp-nio-2] [                                                 ] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-06-13T20:39:51.312+07:00  INFO 18124 --- [reactor-tcp-nio-2] [                                                 ] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-13T20:39:51.314+07:00  INFO 18124 --- [reactor-tcp-nio-2] [                                                 ] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-13T20:39:51.315+07:00  INFO 18124 --- [reactor-tcp-nio-2] [                                                 ] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1749821991312
+2025-06-13T20:39:51.347+07:00  INFO 18124 --- [kafka-producer-network-thread | producer-1] [                                                 ] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: eLBgVjImQLy_noKtp_pHYQ
+2025-06-13T20:39:51.349+07:00  INFO 18124 --- [kafka-producer-network-thread | producer-1] [                                                 ] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 2001 with epoch 0
+2025-06-13T21:44:20.088+07:00  INFO 5652 --- [main] [account-service,,]c.s.a.AccountserviceApplication          : Starting AccountserviceApplication using Java 21.0.7 with PID 5652 (D:\Selftaught\Learn\code\webflux-kafka\accountservice\target\classes started by Admin in D:\Selftaught\Learn\code\webflux-kafka\accountservice)
+2025-06-13T21:44:20.094+07:00  INFO 5652 --- [main] [account-service,,]c.s.a.AccountserviceApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-06-13T21:44:21.287+07:00  INFO 5652 --- [main] [account-service,,].s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2025-06-13T21:44:21.450+07:00  INFO 5652 --- [main] [account-service,,].s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 154 ms. Found 1 R2DBC repository interface.
+2025-06-13T21:44:22.782+07:00  INFO 5652 --- [main] [account-service,,]o.s.cloud.context.scope.GenericScope     : BeanFactory id=ab060dd7-40b5-3b01-ab94-e4476d97274c
+2025-06-13T21:44:25.106+07:00  INFO 5652 --- [main] [account-service,,]o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-accountService-groupId-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = accountService-groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-13T21:44:25.200+07:00  INFO 5652 --- [main] [account-service,,]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-13T21:44:25.349+07:00  INFO 5652 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-13T21:44:25.351+07:00  INFO 5652 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-13T21:44:25.351+07:00  INFO 5652 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1749825865346
+2025-06-13T21:44:25.374+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Subscribed to topic(s): profileOnboarding
+2025-06-13T21:44:25.387+07:00  INFO 5652 --- [main] [account-service,,]o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-accountService-groupId-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = accountService-groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-13T21:44:25.405+07:00  INFO 5652 --- [main] [account-service,,]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-13T21:44:25.421+07:00  INFO 5652 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-13T21:44:25.421+07:00  INFO 5652 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-13T21:44:25.422+07:00  INFO 5652 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1749825865421
+2025-06-13T21:44:25.423+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Subscribed to topic(s): paymentRequest
+2025-06-13T21:44:25.425+07:00  INFO 5652 --- [main] [account-service,,]o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-accountService-groupId-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = accountService-groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-13T21:44:25.434+07:00  INFO 5652 --- [main] [account-service,,]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-13T21:44:25.448+07:00  INFO 5652 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-13T21:44:25.449+07:00  INFO 5652 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-13T21:44:25.449+07:00  INFO 5652 --- [main] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1749825865448
+2025-06-13T21:44:25.453+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Subscribed to topic(s): paymentCompleted
+2025-06-13T21:44:25.765+07:00  INFO 5652 --- [main] [account-service,,]ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 81ec161f-091c-4502-b0fc-cfd614481bea
+
+2025-06-13T21:44:26.215+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-2] [account-service,,]org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Cluster ID: eLBgVjImQLy_noKtp_pHYQ
+2025-06-13T21:44:26.215+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-3] [account-service,,]org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Cluster ID: eLBgVjImQLy_noKtp_pHYQ
+2025-06-13T21:44:26.215+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-1] [account-service,,]org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Cluster ID: eLBgVjImQLy_noKtp_pHYQ
+2025-06-13T21:44:26.219+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Discovered group coordinator 127.0.0.1:9092 (id: 2147483646 rack: null)
+2025-06-13T21:44:26.220+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Discovered group coordinator 127.0.0.1:9092 (id: 2147483646 rack: null)
+2025-06-13T21:44:26.222+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Discovered group coordinator 127.0.0.1:9092 (id: 2147483646 rack: null)
+2025-06-13T21:44:26.228+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T21:44:26.228+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T21:44:26.230+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T21:44:26.283+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Request joining group due to: need to re-join with the given member-id: consumer-accountService-groupId-1-3b451781-b27a-4728-a081-37d5893b9301
+2025-06-13T21:44:26.283+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Request joining group due to: need to re-join with the given member-id: consumer-accountService-groupId-2-e6ff6d36-4330-4519-91bc-717a3d1b86bf
+2025-06-13T21:44:26.283+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Request joining group due to: need to re-join with the given member-id: consumer-accountService-groupId-3-16f31fbf-74b3-414a-874c-23cb29068424
+2025-06-13T21:44:26.289+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T21:44:26.289+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T21:44:26.291+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] (Re-)joining group
+2025-06-13T21:44:28.302+07:00  INFO 5652 --- [main] [account-service,,]o.s.b.a.e.web.EndpointLinksResolver      : Exposing 28 endpoints beneath base path '/actuator'
+2025-06-13T21:44:32.323+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Successfully joined group with generation Generation{generationId=1, memberId='consumer-accountService-groupId-2-e6ff6d36-4330-4519-91bc-717a3d1b86bf', protocol='range'}
+2025-06-13T21:44:32.323+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Successfully joined group with generation Generation{generationId=1, memberId='consumer-accountService-groupId-1-3b451781-b27a-4728-a081-37d5893b9301', protocol='range'}
+2025-06-13T21:44:32.323+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Successfully joined group with generation Generation{generationId=1, memberId='consumer-accountService-groupId-3-16f31fbf-74b3-414a-874c-23cb29068424', protocol='range'}
+2025-06-13T21:44:32.487+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Finished assignment for group at generation 1: {consumer-accountService-groupId-2-e6ff6d36-4330-4519-91bc-717a3d1b86bf=Assignment(partitions=[paymentRequest-0]), consumer-accountService-groupId-3-16f31fbf-74b3-414a-874c-23cb29068424=Assignment(partitions=[paymentCompleted-0]), consumer-accountService-groupId-1-3b451781-b27a-4728-a081-37d5893b9301=Assignment(partitions=[profileOnboarding-0])}
+2025-06-13T21:44:32.504+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Successfully synced group in generation Generation{generationId=1, memberId='consumer-accountService-groupId-3-16f31fbf-74b3-414a-874c-23cb29068424', protocol='range'}
+2025-06-13T21:44:32.504+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Successfully synced group in generation Generation{generationId=1, memberId='consumer-accountService-groupId-2-e6ff6d36-4330-4519-91bc-717a3d1b86bf', protocol='range'}
+2025-06-13T21:44:32.563+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Notifying assignor about the new Assignment(partitions=[paymentRequest-0])
+2025-06-13T21:44:32.511+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Successfully synced group in generation Generation{generationId=1, memberId='consumer-accountService-groupId-1-3b451781-b27a-4728-a081-37d5893b9301', protocol='range'}
+2025-06-13T21:44:32.560+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Notifying assignor about the new Assignment(partitions=[paymentCompleted-0])
+2025-06-13T21:44:32.583+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-2] [account-service,,]k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Adding newly assigned partitions: paymentRequest-0
+2025-06-13T21:44:32.586+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Notifying assignor about the new Assignment(partitions=[profileOnboarding-0])
+2025-06-13T21:44:32.586+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-3] [account-service,,]k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Adding newly assigned partitions: paymentCompleted-0
+2025-06-13T21:44:32.630+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Found no committed offset for partition paymentRequest-0
+2025-06-13T21:44:32.639+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-1] [account-service,,]k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Adding newly assigned partitions: profileOnboarding-0
+2025-06-13T21:44:32.764+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Found no committed offset for partition profileOnboarding-0
+2025-06-13T21:44:32.768+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Found no committed offset for partition paymentCompleted-0
+2025-06-13T21:44:32.810+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-2] [account-service,,]o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-accountService-groupId-2, groupId=accountService-groupId] Resetting offset for partition paymentRequest-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9093 (id: 2 rack: null)], epoch=0}}.
+2025-06-13T21:44:32.874+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-3] [account-service,,]o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-accountService-groupId-3, groupId=accountService-groupId] Resetting offset for partition paymentCompleted-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+2025-06-13T21:44:32.874+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-1] [account-service,,]o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-accountService-groupId-1, groupId=accountService-groupId] Resetting offset for partition profileOnboarding-0 to position FetchPosition{offset=3, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9093 (id: 2 rack: null)], epoch=0}}.
+2025-06-13T21:44:33.356+07:00  INFO 5652 --- [main] [account-service,,]liquibase.changelog                      : Reading from accountdb.DATABASECHANGELOG
+2025-06-13T21:44:33.834+07:00  INFO 5652 --- [main] [account-service,,]liquibase.lockservice                    : Successfully acquired change log lock
+2025-06-13T21:44:33.844+07:00  INFO 5652 --- [main] [account-service,,]liquibase.command                        : Using deploymentId: 9825868950
+2025-06-13T21:44:33.868+07:00  INFO 5652 --- [main] [account-service,,]liquibase.changelog                      : Reading from accountdb.DATABASECHANGELOG
+2025-06-13T21:44:33.891+07:00  INFO 5652 --- [main] [account-service,,]liquibase.ui                             : Running Changeset: db/changelog/account-changelog-create.xml::create-table-account::account
+2025-06-13T21:44:33.917+07:00  INFO 5652 --- [main] [account-service,,]liquibase.changelog                      : Continuing past: db/changelog/account-changelog-create.xml::create-table-account::account despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : table account already exists
+
+2025-06-13T21:44:33.969+07:00  INFO 5652 --- [main] [account-service,,]liquibase.util                           : UPDATE SUMMARY
+2025-06-13T21:44:33.970+07:00  INFO 5652 --- [main] [account-service,,]liquibase.util                           : Run:                          1
+2025-06-13T21:44:33.970+07:00  INFO 5652 --- [main] [account-service,,]liquibase.util                           : Previously run:               5
+2025-06-13T21:44:33.971+07:00  INFO 5652 --- [main] [account-service,,]liquibase.util                           : Filtered out:                 0
+2025-06-13T21:44:33.972+07:00  INFO 5652 --- [main] [account-service,,]liquibase.util                           : -------------------------------
+2025-06-13T21:44:33.973+07:00  INFO 5652 --- [main] [account-service,,]liquibase.util                           : Total change sets:            6
+2025-06-13T21:44:33.976+07:00  INFO 5652 --- [main] [account-service,,]liquibase.util                           : Update summary generated
+2025-06-13T21:44:33.989+07:00  INFO 5652 --- [main] [account-service,,]liquibase.command                        : Update command completed successfully.
+2025-06-13T21:44:33.991+07:00  INFO 5652 --- [main] [account-service,,]liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 0
+2025-06-13T21:44:34.033+07:00  INFO 5652 --- [main] [account-service,,]liquibase.lockservice                    : Successfully released change log lock
+2025-06-13T21:44:34.042+07:00  INFO 5652 --- [main] [account-service,,]liquibase.command                        : Command execution complete
+2025-06-13T21:44:37.300+07:00  INFO 5652 --- [main] [account-service,,]o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 9211 (http)
+2025-06-13T21:44:37.329+07:00  INFO 5652 --- [main] [account-service,,]c.s.a.AccountserviceApplication          : Started AccountserviceApplication in 18.115 seconds (process running for 19.378)
+2025-06-13T21:46:45.256+07:00  INFO 5652 --- [reactive-kafka-accountService-groupId-1] [account-service,,]c.s.accountservice.event.EventConsumer   : Profile Onboarding event
+2025-06-13T21:46:46.205+07:00  INFO 5652 --- [reactor-tcp-nio-2] [account-service,,]o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-06-13T21:46:46.629+07:00  INFO 5652 --- [reactor-tcp-nio-2] [account-service,,]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-13T21:46:46.642+07:00  INFO 5652 --- [reactor-tcp-nio-2] [account-service,,]o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-06-13T21:46:46.662+07:00  INFO 5652 --- [reactor-tcp-nio-2] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-13T21:46:46.662+07:00  INFO 5652 --- [reactor-tcp-nio-2] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-13T21:46:46.663+07:00  INFO 5652 --- [reactor-tcp-nio-2] [account-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1749826006662
+2025-06-13T21:46:46.677+07:00  INFO 5652 --- [kafka-producer-network-thread | producer-1] [account-service,,]org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: eLBgVjImQLy_noKtp_pHYQ
+2025-06-13T21:46:46.680+07:00  INFO 5652 --- [kafka-producer-network-thread | producer-1] [account-service,,]o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 3 with epoch 0

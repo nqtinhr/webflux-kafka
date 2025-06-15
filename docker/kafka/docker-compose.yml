@@ -9,8 +9,10 @@ services:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_SERVER_ID: 1
       ZOOKEEPER_SERVERS: zoo1:2888:3888
+      JMX_PORT: 9998
+      KAFKA_JMX_HOSTNAME: zoo1
     networks:
-      - webflux-kafka-network
+      - webflux-kafka
 
   kafka1:
     image: confluentinc/cp-kafka:7.5.3
@@ -28,10 +30,12 @@ services:
       KAFKA_LOG4J_LOGGERS: "kafka.controller=INFO,kafka.producer.async.DefaultEventHandler=INFO,state.change.logger=INFO"
       KAFKA_AUTHORIZER_CLASS_NAME: kafka.security.authorizer.AclAuthorizer
       KAFKA_ALLOW_EVERYONE_IF_NO_ACL_FOUND: "true"
+      JMX_PORT: 9999
+      KAFKA_JMX_HOSTNAME: kafka1
     depends_on:
       - zoo1
     networks:
-      - webflux-kafka-network
+      - webflux-kafka
 
   kafka2:
     image: confluentinc/cp-kafka:7.5.3
@@ -49,10 +53,12 @@ services:
       KAFKA_LOG4J_LOGGERS: "kafka.controller=INFO,kafka.producer.async.DefaultEventHandler=INFO,state.change.logger=INFO"
       KAFKA_AUTHORIZER_CLASS_NAME: kafka.security.authorizer.AclAuthorizer
       KAFKA_ALLOW_EVERYONE_IF_NO_ACL_FOUND: "true"
+      JMX_PORT: 9999
+      KAFKA_JMX_HOSTNAME: kafka2
     depends_on:
       - zoo1
     networks:
-      - webflux-kafka-network
+      - webflux-kafka
 
   kafka3:
     image: confluentinc/cp-kafka:7.5.3
@@ -70,10 +76,12 @@ services:
       KAFKA_LOG4J_LOGGERS: "kafka.controller=INFO,kafka.producer.async.DefaultEventHandler=INFO,state.change.logger=INFO"
       KAFKA_AUTHORIZER_CLASS_NAME: kafka.security.authorizer.AclAuthorizer
       KAFKA_ALLOW_EVERYONE_IF_NO_ACL_FOUND: "true"
+      JMX_PORT: 9999
+      KAFKA_JMX_HOSTNAME: kafka3
     depends_on:
       - zoo1
     networks:
-      - webflux-kafka-network
+      - webflux-kafka
 
   kafka-ui:
     container_name: kafka-ui
@@ -90,9 +98,8 @@ services:
       KAFKA_CLUSTERS_0_AUDIT_TOPICAUDITENABLED: "true"
       KAFKA_CLUSTERS_0_AUDIT_CONSOLEAUDITENABLED: "true"
     networks:
-      - webflux-kafka-network
+      - webflux-kafka
 
 networks:
-  webflux-kafka-network:
-    driver: bridge
-# docker compose -f kafka-deployment.yml -p webflux-kafka-container up -d
+  webflux-kafka:
+    external: true

@@ -1,0 +1,59 @@
+ https://github.com/prometheus/jmx_exporter/
+  kafka-exporter:
+    image: bitnami/kafka-exporter:1.7.0
+    container_name: kafka-exporter
+    command:
+      - "--kafka.server=kafka1:9092"
+      - "--kafka.server=kafka2:9093"
+      - "--kafka.server=kafka3:9094"
+    ports:
+      - 9308:9308
+    networks:
+      - webflux-kafka
+      
+  jmx-exporter-broker:
+    image: bitnami/jmx-exporter:1.3.0
+    container_name: jmx-exporter-broker
+    volumes:
+      - ./exporter/kafka-2_0_0.yml:/opt/bitnami/jmx-exporter/exporter.yml
+    command:
+      - "5556"
+      - exporter.yml
+    ports:
+      - 9999:5556
+    networks:
+      - webflux-kafka
+
+  jmx-exporter-zookeeper:
+    image: bitnami/jmx-exporter:1.3.0
+    container_name: jmx-exporter-zookeeper
+    volumes:
+      - ./exporter/zookeeper.yml:/opt/bitnami/jmx-exporter/exporter.yml
+    command:
+      - "5556"
+      - exporter.yml
+    ports:
+      - 9998:5556
+    networks:
+      - webflux-kafka
+
+  loki:
+    image: grafana/loki
+    container_name: loki
+    ports:
+      - "3100:3100"
+    command: -config.file=/etc/loki/local-config.yaml
+    networks:
+      - webflux-kafka
+
+  tempo:
+    image: grafana/tempo
+    container_name: tempo
+    ports:
+      - "3200:3200" #tempo
+      - "9411:9411" # zipkin
+    command: -config.file=/etc/tempo.yaml
+    volumes:
+      - ./tempo/tempo.yml:/etc/tempo.yaml
+    networks:
+      - webflux-kafka
