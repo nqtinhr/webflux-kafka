@@ -36,8 +36,26 @@
         </encoder>
     </appender>
 
-    <root level="INFO">
+    <!-- Controller Logger -->
+    <logger name="com.syshero.profileservice.controller" level="INFO" additivity="false">
         <appender-ref ref="LOKI" />
+        <appender-ref ref="CONSOLE" />
+    </logger>
+
+    <!-- Service Logger -->
+    <logger name="com.syshero.profileservice.service" level="INFO" additivity="false">
+        <appender-ref ref="LOKI" />
+        <appender-ref ref="CONSOLE" />
+    </logger>
+
+    <!-- Kafka Event Logger -->
+    <logger name="com.syshero.profileservice.event" level="INFO" additivity="false">
+        <appender-ref ref="LOKI" />
+        <appender-ref ref="CONSOLE" />
+    </logger>
+
+    <!-- Các log khác (ví dụ thư viện, system...) chỉ log ra console -->
+    <root level="INFO">
         <appender-ref ref="CONSOLE" />
     </root>
 </configuration>

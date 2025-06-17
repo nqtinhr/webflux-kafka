@@ -17,6 +17,7 @@ public class EventProducer {
     public Mono<String> sendEvent(String topic,String message){
         return sender.
                 send(Mono.just(SenderRecord.create(new ProducerRecord<>(topic,message),message)))
+                .doOnError(e -> log.error("Kafka send error: topic={}, message={}, error={}", topic, message, e.getMessage(), e))
                 .then().thenReturn("OK");
     }
 }

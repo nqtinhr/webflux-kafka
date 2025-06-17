@@ -10141,3 +10141,1297 @@ Using generated security password: 1c3b95e4-fe40-43cc-8666-da41337d0493
 2025-06-17T15:39:52.953+07:00  INFO 27220 --- [main] [profile-service,,]o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 9214 (http)
 2025-06-17T15:39:52.968+07:00  INFO 27220 --- [main] [profile-service,,]c.s.p.ProfileserviceApplication          : Started ProfileserviceApplication in 44.571 seconds (process running for 46.608)
 2025-06-17T15:40:24.323+07:00  INFO 27220 --- [parallel-1] [profile-service,685129f82b718fe479c28066e9e2e121,d448e42630c9ca1c]c.s.p.service.ProfileService             : Fetching all profiles
+2025-06-17T22:24:32.497+07:00  INFO 1908 --- [main] [profile-service,,]c.s.p.ProfileserviceApplication          : Starting ProfileserviceApplication using Java 21.0.7 with PID 1908 (D:\Selftaught\Learn\code\webflux-kafka\profileservice\target\classes started by Admin in D:\Selftaught\Learn\code\webflux-kafka\profileservice)
+2025-06-17T22:24:32.506+07:00  INFO 1908 --- [main] [profile-service,,]c.s.p.ProfileserviceApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-06-17T22:24:34.343+07:00  INFO 1908 --- [main] [profile-service,,].s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2025-06-17T22:24:34.920+07:00  INFO 1908 --- [main] [profile-service,,].s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 541 ms. Found 1 R2DBC repository interface.
+2025-06-17T22:24:36.517+07:00  INFO 1908 --- [main] [profile-service,,]o.s.cloud.context.scope.GenericScope     : BeanFactory id=0f84eb03-694d-3ac7-a4aa-f55132339b93
+2025-06-17T22:24:39.417+07:00  INFO 1908 --- [main] [profile-service,,]o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-profileService-groupId-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = profileService-groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-17T22:24:39.551+07:00  INFO 1908 --- [main] [profile-service,,]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-17T22:24:39.710+07:00  INFO 1908 --- [main] [profile-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-17T22:24:39.715+07:00  INFO 1908 --- [main] [profile-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-17T22:24:39.716+07:00  INFO 1908 --- [main] [profile-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1750173879708
+2025-06-17T22:24:39.739+07:00  INFO 1908 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Subscribed to topic(s): profileOnboarded
+2025-06-17T22:24:39.964+07:00  INFO 1908 --- [main] [profile-service,,]ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f7b7406a-69f6-446f-89ae-2da83883078a
+
+2025-06-17T22:24:41.091+07:00  WARN 1908 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] The metadata response from the cluster reported a recoverable issue with correlation id 3 : {profileOnboarded=LEADER_NOT_AVAILABLE}
+2025-06-17T22:24:41.098+07:00  INFO 1908 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Cluster ID: FiI5FEofRhae4diqSVEN1Q
+2025-06-17T22:24:41.714+07:00  WARN 1908 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] The metadata response from the cluster reported a recoverable issue with correlation id 10 : {profileOnboarded=LEADER_NOT_AVAILABLE}
+2025-06-17T22:24:42.052+07:00  WARN 1908 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] The metadata response from the cluster reported a recoverable issue with correlation id 11 : {profileOnboarded=LEADER_NOT_AVAILABLE}
+2025-06-17T22:24:45.858+07:00  INFO 1908 --- [main] [profile-service,,]o.s.b.a.e.web.EndpointLinksResolver      : Exposing 28 endpoints beneath base path '/actuator'
+2025-06-17T22:24:50.307+07:00  INFO 1908 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Discovered group coordinator 127.0.0.1:9094 (id: 2147483644 rack: null)
+2025-06-17T22:24:50.324+07:00  INFO 1908 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] (Re-)joining group
+2025-06-17T22:24:50.778+07:00  INFO 1908 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Request joining group due to: need to re-join with the given member-id: consumer-profileService-groupId-1-f8f05f2e-6172-4cd4-8bf3-1881cc78acbc
+2025-06-17T22:24:50.786+07:00  INFO 1908 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] (Re-)joining group
+2025-06-17T22:24:51.555+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.changelog                      : Creating database history table with name: profiledb.DATABASECHANGELOG
+2025-06-17T22:24:51.984+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.changelog                      : Reading from profiledb.DATABASECHANGELOG
+2025-06-17T22:24:52.887+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.snapshot                       : Creating snapshot
+2025-06-17T22:24:53.118+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.lockservice                    : Successfully acquired change log lock
+2025-06-17T22:24:53.122+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.command                        : Using deploymentId: 0173887263
+2025-06-17T22:24:53.127+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.changelog                      : Reading from profiledb.DATABASECHANGELOG
+2025-06-17T22:24:53.165+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-create.xml::create-table-profile::profile
+2025-06-17T22:24:53.176+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.snapshot                       : Creating snapshot
+2025-06-17T22:24:53.242+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.changelog                      : Table profile created
+2025-06-17T22:24:53.246+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.changelog                      : ChangeSet db/changelog/profile-changelog-create.xml::create-table-profile::profile ran successfully in 78ms
+2025-06-17T22:24:53.274+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-create.xml::table-profile-add-column-email::profile
+2025-06-17T22:24:53.329+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.changelog                      : Columns email(VARCHAR(255)) added to profile
+2025-06-17T22:24:53.334+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.changelog                      : ChangeSet db/changelog/profile-changelog-create.xml::table-profile-add-column-email::profile ran successfully in 57ms
+2025-06-17T22:24:53.348+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-create.xml::table-profile-add-column-status::profile
+2025-06-17T22:24:53.391+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.changelog                      : Columns status(VARCHAR(255)) added to profile
+2025-06-17T22:24:53.396+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.changelog                      : ChangeSet db/changelog/profile-changelog-create.xml::table-profile-add-column-status::profile ran successfully in 44ms
+2025-06-17T22:24:53.428+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-create.xml::table-profile-add-column-name::profile
+2025-06-17T22:24:53.495+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.changelog                      : Columns name(VARCHAR(255)) added to profile
+2025-06-17T22:24:53.498+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.changelog                      : ChangeSet db/changelog/profile-changelog-create.xml::table-profile-add-column-name::profile ran successfully in 68ms
+2025-06-17T22:24:53.534+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-create.xml::table-profile-add-column-role::profile
+2025-06-17T22:24:53.592+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.changelog                      : Columns role(VARCHAR(255)) added to profile
+2025-06-17T22:24:53.595+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.changelog                      : ChangeSet db/changelog/profile-changelog-create.xml::table-profile-add-column-role::profile ran successfully in 58ms
+2025-06-17T22:24:53.628+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-name::profile
+2025-06-17T22:24:53.649+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.snapshot                       : Creating snapshot
+2025-06-17T22:24:54.011+07:00  INFO 1908 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Successfully joined group with generation Generation{generationId=1, memberId='consumer-profileService-groupId-1-f8f05f2e-6172-4cd4-8bf3-1881cc78acbc', protocol='range'}
+2025-06-17T22:24:54.043+07:00  INFO 1908 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Finished assignment for group at generation 1: {consumer-profileService-groupId-1-f8f05f2e-6172-4cd4-8bf3-1881cc78acbc=Assignment(partitions=[profileOnboarded-0])}
+2025-06-17T22:24:54.796+07:00  INFO 1908 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Successfully synced group in generation Generation{generationId=1, memberId='consumer-profileService-groupId-1-f8f05f2e-6172-4cd4-8bf3-1881cc78acbc', protocol='range'}
+2025-06-17T22:24:54.801+07:00  INFO 1908 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Notifying assignor about the new Assignment(partitions=[profileOnboarded-0])
+2025-06-17T22:24:54.821+07:00  INFO 1908 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Adding newly assigned partitions: profileOnboarded-0
+2025-06-17T22:24:54.943+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.changelog                      : Index idx_profile_name created
+2025-06-17T22:24:54.945+07:00  INFO 1908 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Found no committed offset for partition profileOnboarded-0
+2025-06-17T22:24:54.955+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.changelog                      : ChangeSet db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-name::profile ran successfully in 1323ms
+2025-06-17T22:24:55.008+07:00  INFO 1908 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Resetting offset for partition profileOnboarded-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+2025-06-17T22:24:55.173+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-email::profile
+2025-06-17T22:24:55.257+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.snapshot                       : Creating snapshot
+2025-06-17T22:24:55.436+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.changelog                      : Index idx_profile_email created
+2025-06-17T22:24:55.445+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.changelog                      : ChangeSet db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-email::profile ran successfully in 263ms
+2025-06-17T22:24:55.502+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.util                           : UPDATE SUMMARY
+2025-06-17T22:24:55.534+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.util                           : Run:                          7
+2025-06-17T22:24:55.543+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.util                           : Previously run:               0
+2025-06-17T22:24:55.544+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.util                           : Filtered out:                 0
+2025-06-17T22:24:55.552+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.util                           : -------------------------------
+2025-06-17T22:24:55.553+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.util                           : Total change sets:            7
+2025-06-17T22:24:55.559+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.util                           : Update summary generated
+2025-06-17T22:24:55.568+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.command                        : Update command completed successfully.
+2025-06-17T22:24:55.571+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 7
+2025-06-17T22:24:55.626+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.lockservice                    : Successfully released change log lock
+2025-06-17T22:24:55.635+07:00  INFO 1908 --- [main] [profile-service,,]liquibase.command                        : Command execution complete
+2025-06-17T22:24:58.852+07:00  INFO 1908 --- [main] [profile-service,,]o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 9214 (http)
+2025-06-17T22:24:58.884+07:00  INFO 1908 --- [main] [profile-service,,]c.s.p.ProfileserviceApplication          : Started ProfileserviceApplication in 27.552 seconds (process running for 28.713)
+2025-06-17T22:28:32.817+07:00  INFO 1908 --- [parallel-2] [profile-service,685189a02f0f4e027124bbba774f0971,4d66c8efaeffb5df]c.s.p.service.ProfileService             : Fetching all profiles
+2025-06-17T22:28:33.403+07:00 ERROR 1908 --- [reactor-tcp-nio-2] [profile-service,685189a02f0f4e027124bbba774f0971,4d66c8efaeffb5df]c.s.c.advide.ExceptionAdvide             : Common error: PF01 404 NOT_FOUND Empty profile list !
+2025-06-17T22:38:39.169+07:00  INFO 2240 --- [main] [profile-service,,]c.s.p.ProfileserviceApplication          : Starting ProfileserviceApplication using Java 21.0.7 with PID 2240 (D:\Selftaught\Learn\code\webflux-kafka\profileservice\target\classes started by Admin in D:\Selftaught\Learn\code\webflux-kafka\profileservice)
+2025-06-17T22:38:39.172+07:00  INFO 2240 --- [main] [profile-service,,]c.s.p.ProfileserviceApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-06-17T22:38:40.813+07:00  INFO 2240 --- [main] [profile-service,,].s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2025-06-17T22:38:41.007+07:00  INFO 2240 --- [main] [profile-service,,].s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 183 ms. Found 1 R2DBC repository interface.
+2025-06-17T22:38:42.414+07:00  INFO 2240 --- [main] [profile-service,,]o.s.cloud.context.scope.GenericScope     : BeanFactory id=0f84eb03-694d-3ac7-a4aa-f55132339b93
+2025-06-17T22:38:44.780+07:00  INFO 2240 --- [main] [profile-service,,]o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-profileService-groupId-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = profileService-groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-17T22:38:44.988+07:00  INFO 2240 --- [main] [profile-service,,]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-17T22:38:45.323+07:00  INFO 2240 --- [main] [profile-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-17T22:38:45.331+07:00  INFO 2240 --- [main] [profile-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-17T22:38:45.333+07:00  INFO 2240 --- [main] [profile-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1750174725318
+2025-06-17T22:38:45.374+07:00  INFO 2240 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Subscribed to topic(s): profileOnboarded
+2025-06-17T22:38:45.652+07:00  INFO 2240 --- [main] [profile-service,,]ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2d6e214c-91c8-4d3d-89eb-7ad09a2d30c6
+
+2025-06-17T22:38:46.369+07:00  INFO 2240 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Cluster ID: FiI5FEofRhae4diqSVEN1Q
+2025-06-17T22:38:46.376+07:00  INFO 2240 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Discovered group coordinator 127.0.0.1:9094 (id: 2147483644 rack: null)
+2025-06-17T22:38:46.385+07:00  INFO 2240 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] (Re-)joining group
+2025-06-17T22:38:46.435+07:00  INFO 2240 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Request joining group due to: need to re-join with the given member-id: consumer-profileService-groupId-1-930c15ff-e264-4976-a3f9-d6cb7e325829
+2025-06-17T22:38:46.437+07:00  INFO 2240 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] (Re-)joining group
+2025-06-17T22:38:48.223+07:00  INFO 2240 --- [main] [profile-service,,]o.s.b.a.e.web.EndpointLinksResolver      : Exposing 28 endpoints beneath base path '/actuator'
+2025-06-17T22:38:49.444+07:00  INFO 2240 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Successfully joined group with generation Generation{generationId=1, memberId='consumer-profileService-groupId-1-930c15ff-e264-4976-a3f9-d6cb7e325829', protocol='range'}
+2025-06-17T22:38:49.469+07:00  INFO 2240 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Finished assignment for group at generation 1: {consumer-profileService-groupId-1-930c15ff-e264-4976-a3f9-d6cb7e325829=Assignment(partitions=[profileOnboarded-0])}
+2025-06-17T22:38:49.493+07:00  INFO 2240 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Successfully synced group in generation Generation{generationId=1, memberId='consumer-profileService-groupId-1-930c15ff-e264-4976-a3f9-d6cb7e325829', protocol='range'}
+2025-06-17T22:38:49.495+07:00  INFO 2240 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Notifying assignor about the new Assignment(partitions=[profileOnboarded-0])
+2025-06-17T22:38:49.504+07:00  INFO 2240 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Adding newly assigned partitions: profileOnboarded-0
+2025-06-17T22:38:49.538+07:00  INFO 2240 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Found no committed offset for partition profileOnboarded-0
+2025-06-17T22:38:49.572+07:00  INFO 2240 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Resetting offset for partition profileOnboarded-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+2025-06-17T22:38:51.425+07:00  INFO 2240 --- [main] [profile-service,,]liquibase.changelog                      : Reading from profiledb.DATABASECHANGELOG
+2025-06-17T22:38:51.625+07:00  INFO 2240 --- [main] [profile-service,,]liquibase.lockservice                    : Successfully acquired change log lock
+2025-06-17T22:38:51.629+07:00  INFO 2240 --- [main] [profile-service,,]liquibase.command                        : Using deploymentId: 0174728854
+2025-06-17T22:38:51.637+07:00  INFO 2240 --- [main] [profile-service,,]liquibase.changelog                      : Reading from profiledb.DATABASECHANGELOG
+2025-06-17T22:38:51.654+07:00  INFO 2240 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-create.xml::create-table-profile::profile
+2025-06-17T22:38:51.670+07:00  INFO 2240 --- [main] [profile-service,,]liquibase.changelog                      : Continuing past: db/changelog/profile-changelog-create.xml::create-table-profile::profile despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : table profile already exists
+
+2025-06-17T22:38:51.684+07:00  INFO 2240 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-create.xml::table-profile-add-column-email::profile
+2025-06-17T22:38:51.697+07:00  INFO 2240 --- [main] [profile-service,,]liquibase.changelog                      : Continuing past: db/changelog/profile-changelog-create.xml::table-profile-add-column-email::profile despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : column email already exists in table profile
+
+2025-06-17T22:38:51.709+07:00  INFO 2240 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-name::profile
+2025-06-17T22:38:51.768+07:00  INFO 2240 --- [main] [profile-service,,]liquibase.changelog                      : Continuing past: db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-name::profile despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : index idx_profile_name already exists
+
+2025-06-17T22:38:51.778+07:00  INFO 2240 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-email::profile
+2025-06-17T22:38:51.829+07:00  INFO 2240 --- [main] [profile-service,,]liquibase.changelog                      : Continuing past: db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-email::profile despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : index idx_profile_email already exists
+
+2025-06-17T22:38:51.847+07:00  INFO 2240 --- [main] [profile-service,,]liquibase.util                           : UPDATE SUMMARY
+2025-06-17T22:38:51.848+07:00  INFO 2240 --- [main] [profile-service,,]liquibase.util                           : Run:                          4
+2025-06-17T22:38:51.849+07:00  INFO 2240 --- [main] [profile-service,,]liquibase.util                           : Previously run:               3
+2025-06-17T22:38:51.851+07:00  INFO 2240 --- [main] [profile-service,,]liquibase.util                           : Filtered out:                 0
+2025-06-17T22:38:51.852+07:00  INFO 2240 --- [main] [profile-service,,]liquibase.util                           : -------------------------------
+2025-06-17T22:38:51.853+07:00  INFO 2240 --- [main] [profile-service,,]liquibase.util                           : Total change sets:            7
+2025-06-17T22:38:51.856+07:00  INFO 2240 --- [main] [profile-service,,]liquibase.util                           : Update summary generated
+2025-06-17T22:38:51.864+07:00  INFO 2240 --- [main] [profile-service,,]liquibase.command                        : Update command completed successfully.
+2025-06-17T22:38:51.865+07:00  INFO 2240 --- [main] [profile-service,,]liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 0
+2025-06-17T22:38:51.878+07:00  INFO 2240 --- [main] [profile-service,,]liquibase.lockservice                    : Successfully released change log lock
+2025-06-17T22:38:51.883+07:00  INFO 2240 --- [main] [profile-service,,]liquibase.command                        : Command execution complete
+2025-06-17T22:38:53.938+07:00  INFO 2240 --- [main] [profile-service,,]o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 9214 (http)
+2025-06-17T22:38:53.950+07:00  INFO 2240 --- [main] [profile-service,,]c.s.p.ProfileserviceApplication          : Started ProfileserviceApplication in 16.008 seconds (process running for 17.144)
+2025-06-17T22:39:16.281+07:00  INFO 2240 --- [parallel-4] [profile-service,68518c24a35c9d37767649434c96278f,5629f5a1ac8a37d1]c.s.p.service.ProfileService             : Fetching all profiles
+2025-06-17T22:39:17.149+07:00 ERROR 2240 --- [reactor-tcp-nio-2] [profile-service,68518c24a35c9d37767649434c96278f,5629f5a1ac8a37d1]c.s.c.advide.ExceptionAdvide             : Common error: PF01 404 NOT_FOUND Empty profile list !
+2025-06-17T22:44:38.791+07:00  INFO 15812 --- [main] [profile-service,,]c.s.p.ProfileserviceApplication          : Starting ProfileserviceApplication using Java 21.0.7 with PID 15812 (D:\Selftaught\Learn\code\webflux-kafka\profileservice\target\classes started by Admin in D:\Selftaught\Learn\code\webflux-kafka\profileservice)
+2025-06-17T22:44:38.800+07:00  INFO 15812 --- [main] [profile-service,,]c.s.p.ProfileserviceApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-06-17T22:44:41.303+07:00  INFO 15812 --- [main] [profile-service,,].s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2025-06-17T22:44:42.346+07:00  INFO 15812 --- [main] [profile-service,,].s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1001 ms. Found 1 R2DBC repository interface.
+2025-06-17T22:44:45.191+07:00  INFO 15812 --- [main] [profile-service,,]o.s.cloud.context.scope.GenericScope     : BeanFactory id=0f84eb03-694d-3ac7-a4aa-f55132339b93
+2025-06-17T22:44:49.017+07:00  INFO 15812 --- [main] [profile-service,,]o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-profileService-groupId-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = profileService-groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-17T22:44:49.310+07:00  INFO 15812 --- [main] [profile-service,,]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-17T22:44:49.771+07:00  INFO 15812 --- [main] [profile-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-17T22:44:49.775+07:00  INFO 15812 --- [main] [profile-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-17T22:44:49.776+07:00  INFO 15812 --- [main] [profile-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1750175089768
+2025-06-17T22:44:49.808+07:00  INFO 15812 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Subscribed to topic(s): profileOnboarded
+2025-06-17T22:44:50.221+07:00  INFO 15812 --- [main] [profile-service,,]ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 441b5271-19fe-4503-a219-4c74e8e8000a
+
+2025-06-17T22:44:52.444+07:00  INFO 15812 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Cluster ID: FiI5FEofRhae4diqSVEN1Q
+2025-06-17T22:44:52.448+07:00  INFO 15812 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Discovered group coordinator 127.0.0.1:9094 (id: 2147483644 rack: null)
+2025-06-17T22:44:52.460+07:00  INFO 15812 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] (Re-)joining group
+2025-06-17T22:44:52.712+07:00  INFO 15812 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Request joining group due to: need to re-join with the given member-id: consumer-profileService-groupId-1-0469870c-e002-4b58-bcf8-2a4f12752150
+2025-06-17T22:44:52.739+07:00  INFO 15812 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] (Re-)joining group
+2025-06-17T22:44:57.832+07:00  INFO 15812 --- [main] [profile-service,,]o.s.b.a.e.web.EndpointLinksResolver      : Exposing 28 endpoints beneath base path '/actuator'
+2025-06-17T22:45:03.269+07:00  INFO 15812 --- [main] [profile-service,,]liquibase.changelog                      : Reading from profiledb.DATABASECHANGELOG
+2025-06-17T22:45:03.774+07:00  INFO 15812 --- [main] [profile-service,,]liquibase.lockservice                    : Successfully acquired change log lock
+2025-06-17T22:45:03.779+07:00  INFO 15812 --- [main] [profile-service,,]liquibase.command                        : Using deploymentId: 0175099319
+2025-06-17T22:45:03.786+07:00  INFO 15812 --- [main] [profile-service,,]liquibase.changelog                      : Reading from profiledb.DATABASECHANGELOG
+2025-06-17T22:45:03.811+07:00  INFO 15812 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-create.xml::create-table-profile::profile
+2025-06-17T22:45:03.832+07:00  INFO 15812 --- [main] [profile-service,,]liquibase.changelog                      : Continuing past: db/changelog/profile-changelog-create.xml::create-table-profile::profile despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : table profile already exists
+
+2025-06-17T22:45:03.859+07:00  INFO 15812 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-create.xml::table-profile-add-column-email::profile
+2025-06-17T22:45:03.882+07:00  INFO 15812 --- [main] [profile-service,,]liquibase.changelog                      : Continuing past: db/changelog/profile-changelog-create.xml::table-profile-add-column-email::profile despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : column email already exists in table profile
+
+2025-06-17T22:45:03.920+07:00  INFO 15812 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-name::profile
+2025-06-17T22:45:04.007+07:00  INFO 15812 --- [main] [profile-service,,]liquibase.changelog                      : Continuing past: db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-name::profile despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : index idx_profile_name already exists
+
+2025-06-17T22:45:04.020+07:00  INFO 15812 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-email::profile
+2025-06-17T22:45:04.089+07:00  INFO 15812 --- [main] [profile-service,,]liquibase.changelog                      : Continuing past: db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-email::profile despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : index idx_profile_email already exists
+
+2025-06-17T22:45:04.120+07:00  INFO 15812 --- [main] [profile-service,,]liquibase.util                           : UPDATE SUMMARY
+2025-06-17T22:45:04.121+07:00  INFO 15812 --- [main] [profile-service,,]liquibase.util                           : Run:                          4
+2025-06-17T22:45:04.122+07:00  INFO 15812 --- [main] [profile-service,,]liquibase.util                           : Previously run:               3
+2025-06-17T22:45:04.122+07:00  INFO 15812 --- [main] [profile-service,,]liquibase.util                           : Filtered out:                 0
+2025-06-17T22:45:04.123+07:00  INFO 15812 --- [main] [profile-service,,]liquibase.util                           : -------------------------------
+2025-06-17T22:45:04.124+07:00  INFO 15812 --- [main] [profile-service,,]liquibase.util                           : Total change sets:            7
+2025-06-17T22:45:04.128+07:00  INFO 15812 --- [main] [profile-service,,]liquibase.util                           : Update summary generated
+2025-06-17T22:45:04.140+07:00  INFO 15812 --- [main] [profile-service,,]liquibase.command                        : Update command completed successfully.
+2025-06-17T22:45:04.141+07:00  INFO 15812 --- [main] [profile-service,,]liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 0
+2025-06-17T22:45:04.206+07:00  INFO 15812 --- [main] [profile-service,,]liquibase.lockservice                    : Successfully released change log lock
+2025-06-17T22:45:04.214+07:00  INFO 15812 --- [main] [profile-service,,]liquibase.command                        : Command execution complete
+2025-06-17T22:45:05.445+07:00  INFO 15812 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Successfully joined group with generation Generation{generationId=2, memberId='consumer-profileService-groupId-1-0469870c-e002-4b58-bcf8-2a4f12752150', protocol='range'}
+2025-06-17T22:45:05.475+07:00  INFO 15812 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Finished assignment for group at generation 2: {consumer-profileService-groupId-1-0469870c-e002-4b58-bcf8-2a4f12752150=Assignment(partitions=[profileOnboarded-0])}
+2025-06-17T22:45:05.516+07:00  INFO 15812 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Successfully synced group in generation Generation{generationId=2, memberId='consumer-profileService-groupId-1-0469870c-e002-4b58-bcf8-2a4f12752150', protocol='range'}
+2025-06-17T22:45:05.521+07:00  INFO 15812 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Notifying assignor about the new Assignment(partitions=[profileOnboarded-0])
+2025-06-17T22:45:05.530+07:00  INFO 15812 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Adding newly assigned partitions: profileOnboarded-0
+2025-06-17T22:45:05.555+07:00  INFO 15812 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Found no committed offset for partition profileOnboarded-0
+2025-06-17T22:45:05.610+07:00  INFO 15812 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Resetting offset for partition profileOnboarded-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+2025-06-17T22:45:07.037+07:00  INFO 15812 --- [main] [profile-service,,]o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 9214 (http)
+2025-06-17T22:45:07.051+07:00  INFO 15812 --- [main] [profile-service,,]c.s.p.ProfileserviceApplication          : Started ProfileserviceApplication in 30.376 seconds (process running for 32.186)
+2025-06-17T22:45:30.465+07:00 ERROR 15812 --- [reactor-tcp-nio-2] [profile-service,68518d99b73246beb58e835c1c0a8b27,171834c9464c2d00]c.s.c.advide.ExceptionAdvide             : Common error: PF01 404 NOT_FOUND Empty profile list !
+2025-06-17T22:46:50.831+07:00 ERROR 15812 --- [reactor-tcp-nio-5] [profile-service,68518dea0cb52b38a85eb4e7eaaa8b01,a65dcb427b429fbb]c.s.c.advide.ExceptionAdvide             : Common error: PF01 404 NOT_FOUND Empty profile list !
+2025-06-17T22:58:32.022+07:00 ERROR 15812 --- [reactor-tcp-nio-5] [profile-service,685190a78d3fe7c7bb338e108e721f86,067c305e7e029aaf]c.s.c.advide.ExceptionAdvide             : Common error: PF01 404 NOT_FOUND Empty profile list !
+2025-06-17T23:01:45.823+07:00  INFO 21704 --- [main] [profile-service,,]c.s.p.ProfileserviceApplication          : Starting ProfileserviceApplication using Java 21.0.7 with PID 21704 (D:\Selftaught\Learn\code\webflux-kafka\profileservice\target\classes started by Admin in D:\Selftaught\Learn\code\webflux-kafka\profileservice)
+2025-06-17T23:01:45.844+07:00  INFO 21704 --- [main] [profile-service,,]c.s.p.ProfileserviceApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-06-17T23:01:48.171+07:00  INFO 21704 --- [main] [profile-service,,].s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2025-06-17T23:01:48.464+07:00  INFO 21704 --- [main] [profile-service,,].s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 259 ms. Found 1 R2DBC repository interface.
+2025-06-17T23:01:49.980+07:00  INFO 21704 --- [main] [profile-service,,]o.s.cloud.context.scope.GenericScope     : BeanFactory id=0f84eb03-694d-3ac7-a4aa-f55132339b93
+2025-06-17T23:01:53.210+07:00  INFO 21704 --- [main] [profile-service,,]o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-profileService-groupId-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = profileService-groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-17T23:01:53.399+07:00  INFO 21704 --- [main] [profile-service,,]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-17T23:01:53.594+07:00  INFO 21704 --- [main] [profile-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-17T23:01:53.600+07:00  INFO 21704 --- [main] [profile-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-17T23:01:53.601+07:00  INFO 21704 --- [main] [profile-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1750176113591
+2025-06-17T23:01:53.632+07:00  INFO 21704 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Subscribed to topic(s): profileOnboarded
+2025-06-17T23:01:53.852+07:00  INFO 21704 --- [main] [profile-service,,]ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e8dcdb34-d9aa-487f-96a6-ca58f32af7a6
+
+2025-06-17T23:01:54.690+07:00  INFO 21704 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Cluster ID: FiI5FEofRhae4diqSVEN1Q
+2025-06-17T23:01:54.703+07:00  INFO 21704 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Discovered group coordinator 127.0.0.1:9094 (id: 2147483644 rack: null)
+2025-06-17T23:01:54.722+07:00  INFO 21704 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] (Re-)joining group
+2025-06-17T23:01:54.871+07:00  INFO 21704 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Request joining group due to: need to re-join with the given member-id: consumer-profileService-groupId-1-87e01434-e032-4a14-a684-5504450eed55
+2025-06-17T23:01:54.884+07:00  INFO 21704 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] (Re-)joining group
+2025-06-17T23:01:56.628+07:00  INFO 21704 --- [main] [profile-service,,]o.s.b.a.e.web.EndpointLinksResolver      : Exposing 28 endpoints beneath base path '/actuator'
+2025-06-17T23:01:57.946+07:00  INFO 21704 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Successfully joined group with generation Generation{generationId=4, memberId='consumer-profileService-groupId-1-87e01434-e032-4a14-a684-5504450eed55', protocol='range'}
+2025-06-17T23:01:57.982+07:00  INFO 21704 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Finished assignment for group at generation 4: {consumer-profileService-groupId-1-87e01434-e032-4a14-a684-5504450eed55=Assignment(partitions=[profileOnboarded-0])}
+2025-06-17T23:01:58.030+07:00  INFO 21704 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Successfully synced group in generation Generation{generationId=4, memberId='consumer-profileService-groupId-1-87e01434-e032-4a14-a684-5504450eed55', protocol='range'}
+2025-06-17T23:01:58.033+07:00  INFO 21704 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Notifying assignor about the new Assignment(partitions=[profileOnboarded-0])
+2025-06-17T23:01:58.044+07:00  INFO 21704 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Adding newly assigned partitions: profileOnboarded-0
+2025-06-17T23:01:58.082+07:00  INFO 21704 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Found no committed offset for partition profileOnboarded-0
+2025-06-17T23:01:58.165+07:00  INFO 21704 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Resetting offset for partition profileOnboarded-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+2025-06-17T23:02:00.044+07:00  INFO 21704 --- [main] [profile-service,,]liquibase.changelog                      : Reading from profiledb.DATABASECHANGELOG
+2025-06-17T23:02:00.660+07:00  INFO 21704 --- [main] [profile-service,,]liquibase.lockservice                    : Successfully acquired change log lock
+2025-06-17T23:02:00.668+07:00  INFO 21704 --- [main] [profile-service,,]liquibase.command                        : Using deploymentId: 0176117527
+2025-06-17T23:02:00.675+07:00  INFO 21704 --- [main] [profile-service,,]liquibase.changelog                      : Reading from profiledb.DATABASECHANGELOG
+2025-06-17T23:02:00.738+07:00  INFO 21704 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-create.xml::create-table-profile::profile
+2025-06-17T23:02:00.777+07:00  INFO 21704 --- [main] [profile-service,,]liquibase.changelog                      : Continuing past: db/changelog/profile-changelog-create.xml::create-table-profile::profile despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : table profile already exists
+
+2025-06-17T23:02:00.823+07:00  INFO 21704 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-create.xml::table-profile-add-column-email::profile
+2025-06-17T23:02:00.844+07:00  INFO 21704 --- [main] [profile-service,,]liquibase.changelog                      : Continuing past: db/changelog/profile-changelog-create.xml::table-profile-add-column-email::profile despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : column email already exists in table profile
+
+2025-06-17T23:02:00.938+07:00  INFO 21704 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-name::profile
+2025-06-17T23:02:01.060+07:00  INFO 21704 --- [main] [profile-service,,]liquibase.changelog                      : Continuing past: db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-name::profile despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : index idx_profile_name already exists
+
+2025-06-17T23:02:01.085+07:00  INFO 21704 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-email::profile
+2025-06-17T23:02:01.241+07:00  INFO 21704 --- [main] [profile-service,,]liquibase.changelog                      : Continuing past: db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-email::profile despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : index idx_profile_email already exists
+
+2025-06-17T23:02:01.260+07:00  INFO 21704 --- [main] [profile-service,,]liquibase.util                           : UPDATE SUMMARY
+2025-06-17T23:02:01.261+07:00  INFO 21704 --- [main] [profile-service,,]liquibase.util                           : Run:                          4
+2025-06-17T23:02:01.261+07:00  INFO 21704 --- [main] [profile-service,,]liquibase.util                           : Previously run:               3
+2025-06-17T23:02:01.262+07:00  INFO 21704 --- [main] [profile-service,,]liquibase.util                           : Filtered out:                 0
+2025-06-17T23:02:01.262+07:00  INFO 21704 --- [main] [profile-service,,]liquibase.util                           : -------------------------------
+2025-06-17T23:02:01.263+07:00  INFO 21704 --- [main] [profile-service,,]liquibase.util                           : Total change sets:            7
+2025-06-17T23:02:01.267+07:00  INFO 21704 --- [main] [profile-service,,]liquibase.util                           : Update summary generated
+2025-06-17T23:02:01.275+07:00  INFO 21704 --- [main] [profile-service,,]liquibase.command                        : Update command completed successfully.
+2025-06-17T23:02:01.276+07:00  INFO 21704 --- [main] [profile-service,,]liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 0
+2025-06-17T23:02:01.309+07:00  INFO 21704 --- [main] [profile-service,,]liquibase.lockservice                    : Successfully released change log lock
+2025-06-17T23:02:01.314+07:00  INFO 21704 --- [main] [profile-service,,]liquibase.command                        : Command execution complete
+2025-06-17T23:02:03.580+07:00  INFO 21704 --- [main] [profile-service,,]o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 9214 (http)
+2025-06-17T23:02:03.595+07:00  INFO 21704 --- [main] [profile-service,,]c.s.p.ProfileserviceApplication          : Started ProfileserviceApplication in 19.518 seconds (process running for 20.805)
+2025-06-17T23:02:42.649+07:00 ERROR 21704 --- [reactor-tcp-nio-2] [profile-service,685191a1a24f833cebf3b299dce3004f,edec9ebd64cd44a8]c.s.c.advide.ExceptionAdvide             : Common error: PF01 404 NOT_FOUND Empty profile list !
+2025-06-17T23:04:39.845+07:00  INFO 21704 --- [reactor-tcp-nio-5] [profile-service,6851921558db6e5dde5f0720de794706,dab52567a2d2a8be]o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-06-17T23:04:39.867+07:00  INFO 21704 --- [reactor-tcp-nio-5] [profile-service,6851921558db6e5dde5f0720de794706,dab52567a2d2a8be]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-17T23:04:39.888+07:00  INFO 21704 --- [reactor-tcp-nio-5] [profile-service,6851921558db6e5dde5f0720de794706,dab52567a2d2a8be]o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-06-17T23:04:39.912+07:00  INFO 21704 --- [reactor-tcp-nio-5] [profile-service,6851921558db6e5dde5f0720de794706,dab52567a2d2a8be]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-17T23:04:39.913+07:00  INFO 21704 --- [reactor-tcp-nio-5] [profile-service,6851921558db6e5dde5f0720de794706,dab52567a2d2a8be]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-17T23:04:39.914+07:00  INFO 21704 --- [reactor-tcp-nio-5] [profile-service,6851921558db6e5dde5f0720de794706,dab52567a2d2a8be]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1750176279912
+2025-06-17T23:04:39.935+07:00  INFO 21704 --- [kafka-producer-network-thread | producer-1] [profile-service,,]org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: FiI5FEofRhae4diqSVEN1Q
+2025-06-17T23:04:39.993+07:00  INFO 21704 --- [kafka-producer-network-thread | producer-1] [profile-service,,]o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 0 with epoch 0
+2025-06-17T23:18:22.153+07:00  INFO 5300 --- [main] [profile-service,,]c.s.p.ProfileserviceApplication          : Starting ProfileserviceApplication using Java 21.0.7 with PID 5300 (D:\Selftaught\Learn\code\webflux-kafka\profileservice\target\classes started by Admin in D:\Selftaught\Learn\code\webflux-kafka\profileservice)
+2025-06-17T23:18:22.159+07:00  INFO 5300 --- [main] [profile-service,,]c.s.p.ProfileserviceApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-06-17T23:18:24.426+07:00  INFO 5300 --- [main] [profile-service,,].s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2025-06-17T23:18:24.759+07:00  INFO 5300 --- [main] [profile-service,,].s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 316 ms. Found 1 R2DBC repository interface.
+2025-06-17T23:18:27.512+07:00  INFO 5300 --- [main] [profile-service,,]o.s.cloud.context.scope.GenericScope     : BeanFactory id=0f84eb03-694d-3ac7-a4aa-f55132339b93
+2025-06-17T23:18:31.900+07:00  INFO 5300 --- [main] [profile-service,,]o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-profileService-groupId-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = profileService-groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-17T23:18:32.108+07:00  INFO 5300 --- [main] [profile-service,,]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-17T23:18:32.417+07:00  INFO 5300 --- [main] [profile-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-17T23:18:32.463+07:00  INFO 5300 --- [main] [profile-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-17T23:18:32.522+07:00  INFO 5300 --- [main] [profile-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1750177112415
+2025-06-17T23:18:32.675+07:00  INFO 5300 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Subscribed to topic(s): profileOnboarded
+2025-06-17T23:18:33.461+07:00  INFO 5300 --- [main] [profile-service,,]ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: d1f266f2-e3e7-4798-a408-efb685a34cf3
+
+2025-06-17T23:18:34.648+07:00  INFO 5300 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Cluster ID: FiI5FEofRhae4diqSVEN1Q
+2025-06-17T23:18:34.657+07:00  INFO 5300 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Discovered group coordinator 127.0.0.1:9094 (id: 2147483644 rack: null)
+2025-06-17T23:18:34.661+07:00  INFO 5300 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] (Re-)joining group
+2025-06-17T23:18:34.808+07:00  INFO 5300 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Request joining group due to: need to re-join with the given member-id: consumer-profileService-groupId-1-ba98e0a0-06b9-45cd-a82c-294e215d51ed
+2025-06-17T23:18:34.815+07:00  INFO 5300 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] (Re-)joining group
+2025-06-17T23:18:37.298+07:00  INFO 5300 --- [main] [profile-service,,]o.s.b.a.e.web.EndpointLinksResolver      : Exposing 28 endpoints beneath base path '/actuator'
+2025-06-17T23:18:37.846+07:00  INFO 5300 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Successfully joined group with generation Generation{generationId=6, memberId='consumer-profileService-groupId-1-ba98e0a0-06b9-45cd-a82c-294e215d51ed', protocol='range'}
+2025-06-17T23:18:37.863+07:00  INFO 5300 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Finished assignment for group at generation 6: {consumer-profileService-groupId-1-ba98e0a0-06b9-45cd-a82c-294e215d51ed=Assignment(partitions=[profileOnboarded-0])}
+2025-06-17T23:18:37.900+07:00  INFO 5300 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Successfully synced group in generation Generation{generationId=6, memberId='consumer-profileService-groupId-1-ba98e0a0-06b9-45cd-a82c-294e215d51ed', protocol='range'}
+2025-06-17T23:18:37.913+07:00  INFO 5300 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Notifying assignor about the new Assignment(partitions=[profileOnboarded-0])
+2025-06-17T23:18:37.922+07:00  INFO 5300 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Adding newly assigned partitions: profileOnboarded-0
+2025-06-17T23:18:37.955+07:00  INFO 5300 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Found no committed offset for partition profileOnboarded-0
+2025-06-17T23:18:38.017+07:00  INFO 5300 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Resetting offset for partition profileOnboarded-0 to position FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+2025-06-17T23:18:42.992+07:00  INFO 5300 --- [main] [profile-service,,]liquibase.changelog                      : Reading from profiledb.DATABASECHANGELOG
+2025-06-17T23:18:43.847+07:00  INFO 5300 --- [main] [profile-service,,]liquibase.lockservice                    : Successfully acquired change log lock
+2025-06-17T23:18:43.860+07:00  INFO 5300 --- [main] [profile-service,,]liquibase.command                        : Using deploymentId: 0177118434
+2025-06-17T23:18:43.879+07:00  INFO 5300 --- [main] [profile-service,,]liquibase.changelog                      : Reading from profiledb.DATABASECHANGELOG
+2025-06-17T23:18:43.905+07:00  INFO 5300 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-create.xml::create-table-profile::profile
+2025-06-17T23:18:44.051+07:00  INFO 5300 --- [main] [profile-service,,]liquibase.changelog                      : Continuing past: db/changelog/profile-changelog-create.xml::create-table-profile::profile despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : table profile already exists
+
+2025-06-17T23:18:44.226+07:00  INFO 5300 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-create.xml::table-profile-add-column-email::profile
+2025-06-17T23:18:44.275+07:00  INFO 5300 --- [main] [profile-service,,]liquibase.changelog                      : Continuing past: db/changelog/profile-changelog-create.xml::table-profile-add-column-email::profile despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : column email already exists in table profile
+
+2025-06-17T23:18:44.310+07:00  INFO 5300 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-name::profile
+2025-06-17T23:18:44.461+07:00  INFO 5300 --- [main] [profile-service,,]liquibase.changelog                      : Continuing past: db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-name::profile despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : index idx_profile_name already exists
+
+2025-06-17T23:18:44.488+07:00  INFO 5300 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-email::profile
+2025-06-17T23:18:44.587+07:00  INFO 5300 --- [main] [profile-service,,]liquibase.changelog                      : Continuing past: db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-email::profile despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : index idx_profile_email already exists
+
+2025-06-17T23:18:44.664+07:00  INFO 5300 --- [main] [profile-service,,]liquibase.util                           : UPDATE SUMMARY
+2025-06-17T23:18:44.665+07:00  INFO 5300 --- [main] [profile-service,,]liquibase.util                           : Run:                          4
+2025-06-17T23:18:44.666+07:00  INFO 5300 --- [main] [profile-service,,]liquibase.util                           : Previously run:               3
+2025-06-17T23:18:44.666+07:00  INFO 5300 --- [main] [profile-service,,]liquibase.util                           : Filtered out:                 0
+2025-06-17T23:18:44.668+07:00  INFO 5300 --- [main] [profile-service,,]liquibase.util                           : -------------------------------
+2025-06-17T23:18:44.670+07:00  INFO 5300 --- [main] [profile-service,,]liquibase.util                           : Total change sets:            7
+2025-06-17T23:18:44.672+07:00  INFO 5300 --- [main] [profile-service,,]liquibase.util                           : Update summary generated
+2025-06-17T23:18:44.680+07:00  INFO 5300 --- [main] [profile-service,,]liquibase.command                        : Update command completed successfully.
+2025-06-17T23:18:44.684+07:00  INFO 5300 --- [main] [profile-service,,]liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 0
+2025-06-17T23:18:44.727+07:00  INFO 5300 --- [main] [profile-service,,]liquibase.lockservice                    : Successfully released change log lock
+2025-06-17T23:18:44.744+07:00  INFO 5300 --- [main] [profile-service,,]liquibase.command                        : Command execution complete
+2025-06-17T23:18:48.542+07:00  INFO 5300 --- [main] [profile-service,,]o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 9214 (http)
+2025-06-17T23:18:48.569+07:00  INFO 5300 --- [main] [profile-service,,]c.s.p.ProfileserviceApplication          : Started ProfileserviceApplication in 28.29 seconds (process running for 29.828)
+2025-06-17T23:22:07.444+07:00  INFO 5300 --- [reactor-tcp-nio-2] [profile-service,6851962d8297bf1e241a630022cdb065,89b45129f50e28a8]o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-06-17T23:22:07.474+07:00  INFO 5300 --- [reactor-tcp-nio-2] [profile-service,6851962d8297bf1e241a630022cdb065,89b45129f50e28a8]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-17T23:22:07.504+07:00  INFO 5300 --- [reactor-tcp-nio-2] [profile-service,6851962d8297bf1e241a630022cdb065,89b45129f50e28a8]o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-06-17T23:22:07.552+07:00  INFO 5300 --- [reactor-tcp-nio-2] [profile-service,6851962d8297bf1e241a630022cdb065,89b45129f50e28a8]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-17T23:22:07.554+07:00  INFO 5300 --- [reactor-tcp-nio-2] [profile-service,6851962d8297bf1e241a630022cdb065,89b45129f50e28a8]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-17T23:22:07.565+07:00  INFO 5300 --- [reactor-tcp-nio-2] [profile-service,6851962d8297bf1e241a630022cdb065,89b45129f50e28a8]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1750177327552
+2025-06-17T23:22:07.678+07:00  INFO 5300 --- [kafka-producer-network-thread | producer-1] [profile-service,,]org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: FiI5FEofRhae4diqSVEN1Q
+2025-06-17T23:22:07.701+07:00  INFO 5300 --- [kafka-producer-network-thread | producer-1] [profile-service,,]o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 2000 with epoch 0
+2025-06-17T23:23:56.841+07:00  INFO 20324 --- [main] [profile-service,,]c.s.p.ProfileserviceApplication          : Starting ProfileserviceApplication using Java 21.0.7 with PID 20324 (D:\Selftaught\Learn\code\webflux-kafka\profileservice\target\classes started by Admin in D:\Selftaught\Learn\code\webflux-kafka\profileservice)
+2025-06-17T23:23:56.880+07:00  INFO 20324 --- [main] [profile-service,,]c.s.p.ProfileserviceApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-06-17T23:24:01.711+07:00  INFO 20324 --- [main] [profile-service,,].s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2025-06-17T23:24:02.083+07:00  INFO 20324 --- [main] [profile-service,,].s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 351 ms. Found 1 R2DBC repository interface.
+2025-06-17T23:24:04.471+07:00  INFO 20324 --- [main] [profile-service,,]o.s.cloud.context.scope.GenericScope     : BeanFactory id=0f84eb03-694d-3ac7-a4aa-f55132339b93
+2025-06-17T23:24:09.860+07:00  INFO 20324 --- [main] [profile-service,,]o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-profileService-groupId-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = profileService-groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-17T23:24:10.082+07:00  INFO 20324 --- [main] [profile-service,,]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-17T23:24:10.353+07:00  INFO 20324 --- [main] [profile-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-17T23:24:10.356+07:00  INFO 20324 --- [main] [profile-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-17T23:24:10.357+07:00  INFO 20324 --- [main] [profile-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1750177450348
+2025-06-17T23:24:10.627+07:00  INFO 20324 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Subscribed to topic(s): profileOnboarded
+2025-06-17T23:24:11.184+07:00  INFO 20324 --- [main] [profile-service,,]ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 94ad2ecc-2254-472c-8301-5fcf22ba2519
+
+2025-06-17T23:24:15.647+07:00  INFO 20324 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Cluster ID: FiI5FEofRhae4diqSVEN1Q
+2025-06-17T23:24:15.690+07:00  INFO 20324 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Discovered group coordinator 127.0.0.1:9094 (id: 2147483644 rack: null)
+2025-06-17T23:24:15.941+07:00  INFO 20324 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] (Re-)joining group
+2025-06-17T23:24:15.956+07:00  INFO 20324 --- [main] [profile-service,,]o.s.b.a.e.web.EndpointLinksResolver      : Exposing 28 endpoints beneath base path '/actuator'
+2025-06-17T23:24:16.508+07:00  INFO 20324 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Request joining group due to: need to re-join with the given member-id: consumer-profileService-groupId-1-b5f331d8-c8db-4f0f-9a23-e4bc6a7b81b3
+2025-06-17T23:24:16.789+07:00  INFO 20324 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] (Re-)joining group
+2025-06-17T23:24:19.981+07:00  INFO 20324 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Successfully joined group with generation Generation{generationId=8, memberId='consumer-profileService-groupId-1-b5f331d8-c8db-4f0f-9a23-e4bc6a7b81b3', protocol='range'}
+2025-06-17T23:24:20.002+07:00  INFO 20324 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Finished assignment for group at generation 8: {consumer-profileService-groupId-1-b5f331d8-c8db-4f0f-9a23-e4bc6a7b81b3=Assignment(partitions=[profileOnboarded-0])}
+2025-06-17T23:24:20.071+07:00  INFO 20324 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Successfully synced group in generation Generation{generationId=8, memberId='consumer-profileService-groupId-1-b5f331d8-c8db-4f0f-9a23-e4bc6a7b81b3', protocol='range'}
+2025-06-17T23:24:20.077+07:00  INFO 20324 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Notifying assignor about the new Assignment(partitions=[profileOnboarded-0])
+2025-06-17T23:24:20.093+07:00  INFO 20324 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Adding newly assigned partitions: profileOnboarded-0
+2025-06-17T23:24:20.128+07:00  INFO 20324 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Found no committed offset for partition profileOnboarded-0
+2025-06-17T23:24:20.284+07:00  INFO 20324 --- [reactive-kafka-profileService-groupId-1] [profile-service,,]o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-profileService-groupId-1, groupId=profileService-groupId] Resetting offset for partition profileOnboarded-0 to position FetchPosition{offset=3, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9092 (id: 1 rack: null)], epoch=0}}.
+2025-06-17T23:24:20.668+07:00  INFO 20324 --- [main] [profile-service,,]liquibase.changelog                      : Reading from profiledb.DATABASECHANGELOG
+2025-06-17T23:24:21.126+07:00  INFO 20324 --- [main] [profile-service,,]liquibase.lockservice                    : Successfully acquired change log lock
+2025-06-17T23:24:21.163+07:00  INFO 20324 --- [main] [profile-service,,]liquibase.command                        : Using deploymentId: 0177457142
+2025-06-17T23:24:21.224+07:00  INFO 20324 --- [main] [profile-service,,]liquibase.changelog                      : Reading from profiledb.DATABASECHANGELOG
+2025-06-17T23:24:21.299+07:00  INFO 20324 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-create.xml::create-table-profile::profile
+2025-06-17T23:24:21.335+07:00  INFO 20324 --- [main] [profile-service,,]liquibase.changelog                      : Continuing past: db/changelog/profile-changelog-create.xml::create-table-profile::profile despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : table profile already exists
+
+2025-06-17T23:24:21.403+07:00  INFO 20324 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-create.xml::table-profile-add-column-email::profile
+2025-06-17T23:24:21.453+07:00  INFO 20324 --- [main] [profile-service,,]liquibase.changelog                      : Continuing past: db/changelog/profile-changelog-create.xml::table-profile-add-column-email::profile despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : column email already exists in table profile
+
+2025-06-17T23:24:21.573+07:00  INFO 20324 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-name::profile
+2025-06-17T23:24:21.682+07:00  INFO 20324 --- [main] [profile-service,,]liquibase.changelog                      : Continuing past: db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-name::profile despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : index idx_profile_name already exists
+
+2025-06-17T23:24:21.708+07:00  INFO 20324 --- [main] [profile-service,,]liquibase.ui                             : Running Changeset: db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-email::profile
+2025-06-17T23:24:21.868+07:00  INFO 20324 --- [main] [profile-service,,]liquibase.changelog                      : Continuing past: db/changelog/profile-changelog-indexes.xml::add-index-table-profile-column-email::profile despite precondition failure due to onFail='CONTINUE': 
+          db/changelog/changelog-master.xml : index idx_profile_email already exists
+
+2025-06-17T23:24:22.019+07:00  INFO 20324 --- [main] [profile-service,,]liquibase.util                           : UPDATE SUMMARY
+2025-06-17T23:24:22.021+07:00  INFO 20324 --- [main] [profile-service,,]liquibase.util                           : Run:                          4
+2025-06-17T23:24:22.024+07:00  INFO 20324 --- [main] [profile-service,,]liquibase.util                           : Previously run:               3
+2025-06-17T23:24:22.025+07:00  INFO 20324 --- [main] [profile-service,,]liquibase.util                           : Filtered out:                 0
+2025-06-17T23:24:22.026+07:00  INFO 20324 --- [main] [profile-service,,]liquibase.util                           : -------------------------------
+2025-06-17T23:24:22.028+07:00  INFO 20324 --- [main] [profile-service,,]liquibase.util                           : Total change sets:            7
+2025-06-17T23:24:22.030+07:00  INFO 20324 --- [main] [profile-service,,]liquibase.util                           : Update summary generated
+2025-06-17T23:24:22.039+07:00  INFO 20324 --- [main] [profile-service,,]liquibase.command                        : Update command completed successfully.
+2025-06-17T23:24:22.040+07:00  INFO 20324 --- [main] [profile-service,,]liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 0
+2025-06-17T23:24:22.100+07:00  INFO 20324 --- [main] [profile-service,,]liquibase.lockservice                    : Successfully released change log lock
+2025-06-17T23:24:22.115+07:00  INFO 20324 --- [main] [profile-service,,]liquibase.command                        : Command execution complete
+2025-06-17T23:24:24.982+07:00  INFO 20324 --- [main] [profile-service,,]o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 9214 (http)
+2025-06-17T23:24:25.116+07:00  INFO 20324 --- [main] [profile-service,,]c.s.p.ProfileserviceApplication          : Started ProfileserviceApplication in 32.724 seconds (process running for 36.566)
+2025-06-17T23:29:47.750+07:00 ERROR 20324 --- [reactor-tcp-nio-2] [profile-service,685197f9d9c571bf04b3f3fdeb8f08cb,10e6f1214e47c8ad]c.s.c.advide.ExceptionAdvide             : Common error: PF02 400 BAD_REQUEST Duplicate profile !
+2025-06-17T23:30:54.989+07:00  INFO 20324 --- [reactor-tcp-nio-5] [profile-service,6851983ee0edc631e87ce64e5f3bffa1,70ba33e7184a9a95]o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092, localhost:9093, localhost:9094]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-06-17T23:30:55.008+07:00  INFO 20324 --- [reactor-tcp-nio-5] [profile-service,6851983ee0edc631e87ce64e5f3bffa1,70ba33e7184a9a95]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-17T23:30:55.044+07:00  INFO 20324 --- [reactor-tcp-nio-5] [profile-service,6851983ee0edc631e87ce64e5f3bffa1,70ba33e7184a9a95]o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-06-17T23:30:55.117+07:00  INFO 20324 --- [reactor-tcp-nio-5] [profile-service,6851983ee0edc631e87ce64e5f3bffa1,70ba33e7184a9a95]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-17T23:30:55.154+07:00  INFO 20324 --- [reactor-tcp-nio-5] [profile-service,6851983ee0edc631e87ce64e5f3bffa1,70ba33e7184a9a95]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-17T23:30:55.166+07:00  INFO 20324 --- [reactor-tcp-nio-5] [profile-service,6851983ee0edc631e87ce64e5f3bffa1,70ba33e7184a9a95]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1750177855117
+2025-06-17T23:30:55.182+07:00  INFO 20324 --- [kafka-producer-network-thread | producer-1] [profile-service,,]org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: FiI5FEofRhae4diqSVEN1Q
+2025-06-17T23:30:55.204+07:00  INFO 20324 --- [kafka-producer-network-thread | producer-1] [profile-service,,]o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 1001 with epoch 0

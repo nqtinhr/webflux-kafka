@@ -4894,3 +4894,670 @@ org.apache.kafka.common.errors.DisconnectException: null
 2025-06-16T21:49:13.105+07:00  INFO 11860 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Discovered group coordinator 127.0.0.1:9093 (id: 2147483645 rack: null)
 2025-06-16T21:49:13.151+07:00  INFO 11860 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Discovered group coordinator 127.0.0.1:9093 (id: 2147483645 rack: null)
 2025-06-16T21:49:13.236+07:00  INFO 11860 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Discovered group coordinator 127.0.0.1:9093 (id: 2147483645 rack: null)
+2025-06-17T22:55:15.685+07:00  INFO 12836 --- [main] [payment-processing-service,,].s.p.PaymentprocessingserviceApplication : Starting PaymentprocessingserviceApplication using Java 21.0.7 with PID 12836 (D:\Selftaught\Learn\code\webflux-kafka\paymentprocessingservice\target\classes started by Admin in D:\Selftaught\Learn\code\webflux-kafka\paymentprocessingservice)
+2025-06-17T22:55:15.696+07:00  INFO 12836 --- [main] [payment-processing-service,,].s.p.PaymentprocessingserviceApplication : No active profile set, falling back to 1 default profile: "default"
+2025-06-17T22:55:17.790+07:00  INFO 12836 --- [main] [payment-processing-service,,].s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2025-06-17T22:55:17.822+07:00  INFO 12836 --- [main] [payment-processing-service,,].s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 R2DBC repository interfaces.
+2025-06-17T22:55:19.258+07:00  INFO 12836 --- [main] [payment-processing-service,,].s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2025-06-17T22:55:19.287+07:00  INFO 12836 --- [main] [payment-processing-service,,].s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 0 R2DBC repository interfaces.
+2025-06-17T22:55:20.559+07:00  INFO 12836 --- [main] [payment-processing-service,,]o.s.cloud.context.scope.GenericScope     : BeanFactory id=fa822bfc-a857-3f95-a15a-071f21f86d45
+2025-06-17T22:55:23.372+07:00  INFO 12836 --- [main] [payment-processing-service,,]o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-paymentProcessingService-groupId-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = paymentProcessingService-groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-17T22:55:23.537+07:00  INFO 12836 --- [main] [payment-processing-service,,]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-17T22:55:23.939+07:00  INFO 12836 --- [main] [payment-processing-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-17T22:55:23.943+07:00  INFO 12836 --- [main] [payment-processing-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-17T22:55:23.959+07:00  INFO 12836 --- [main] [payment-processing-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1750175723932
+2025-06-17T22:55:24.193+07:00  INFO 12836 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Subscribed to topic(s): paymentCreated
+2025-06-17T22:55:24.703+07:00  INFO 12836 --- [main] [payment-processing-service,,]ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 8660bb3c-2f2c-42f1-8ff3-41633c008605
+
+2025-06-17T22:55:31.038+07:00  WARN 12836 --- [main] [payment-processing-service,,]onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webHandler' defined in class path resource [org/springframework/boot/autoconfigure/web/reactive/WebFluxAutoConfiguration$EnableWebFluxConfiguration.class]: Error creating bean with name 'healthEndpointWebFluxHandlerMapping' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointReactiveWebExtensionConfiguration$WebFluxAdditionalHealthEndpointPathsConfiguration.class]: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.reactive.AdditionalHealthEndpointPathsWebFluxHandlerMapping]: Factory method 'healthEndpointWebFluxHandlerMapping' threw exception with message: Error creating bean with name 'healthEndpoint' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: Unsatisfied dependency expressed through method 'healthEndpoint' parameter 0: Error creating bean with name 'healthContributorRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: Unsatisfied dependency expressed through method 'healthContributorRegistry' parameter 3: Error creating bean with name 'r2dbcHealthContributor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/r2dbc/ConnectionFactoryHealthContributorAutoConfiguration.class]: Failed to instantiate [org.springframework.boot.actuate.health.ReactiveHealthContributor]: Factory method 'r2dbcHealthContributor' threw exception with message: Error creating bean with name 'connectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/r2dbc/ConnectionFactoryConfigurations$PoolConfiguration$PooledConnectionFactoryConfiguration.class]: Failed to instantiate [io.r2dbc.pool.ConnectionPool]: Factory method 'connectionFactory' threw exception with message: Failed to determine a suitable R2DBC Connection URL
+2025-06-17T22:55:32.076+07:00  WARN 12836 --- [main] [payment-processing-service,,]z.r.i.AsyncReporter$BoundedAsyncReporter : Timed out waiting for in-flight spans to send
+2025-06-17T22:55:32.121+07:00  INFO 12836 --- [main] [payment-processing-service,,].s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-17T22:55:32.164+07:00 ERROR 12836 --- [main] [payment-processing-service,,]o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a ConnectionFactory: 'url' attribute is not specified and no embedded database could be configured.
+
+Reason: Failed to determine a suitable R2DBC Connection URL
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2025-06-17T22:55:33.050+07:00  WARN 12836 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] The metadata response from the cluster reported a recoverable issue with correlation id 3 : {paymentCreated=LEADER_NOT_AVAILABLE}
+2025-06-17T22:55:33.079+07:00  INFO 12836 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Cluster ID: FiI5FEofRhae4diqSVEN1Q
+2025-06-17T22:55:33.082+07:00  INFO 12836 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Discovered group coordinator 127.0.0.1:9093 (id: 2147483645 rack: null)
+2025-06-17T22:55:33.105+07:00  INFO 12836 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] (Re-)joining group
+2025-06-17T22:55:34.166+07:00  INFO 12836 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Request joining group due to: need to re-join with the given member-id: consumer-paymentProcessingService-groupId-1-ed107642-8ba8-413c-82c8-57fbbc23ba10
+2025-06-17T22:55:34.179+07:00  INFO 12836 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] (Re-)joining group
+2025-06-17T22:55:37.928+07:00  INFO 12836 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Successfully joined group with generation Generation{generationId=1, memberId='consumer-paymentProcessingService-groupId-1-ed107642-8ba8-413c-82c8-57fbbc23ba10', protocol='range'}
+2025-06-17T22:55:38.408+07:00  INFO 12836 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Finished assignment for group at generation 1: {consumer-paymentProcessingService-groupId-1-ed107642-8ba8-413c-82c8-57fbbc23ba10=Assignment(partitions=[paymentCreated-0])}
+2025-06-17T22:55:38.769+07:00  INFO 12836 --- [kafka-coordinator-heartbeat-thread | paymentProcessingService-groupId] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Successfully synced group in generation Generation{generationId=1, memberId='consumer-paymentProcessingService-groupId-1-ed107642-8ba8-413c-82c8-57fbbc23ba10', protocol='range'}
+2025-06-17T22:55:38.860+07:00  INFO 12836 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Notifying assignor about the new Assignment(partitions=[paymentCreated-0])
+2025-06-17T22:55:38.989+07:00  INFO 12836 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Adding newly assigned partitions: paymentCreated-0
+2025-06-17T22:55:39.190+07:00  INFO 12836 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Found no committed offset for partition paymentCreated-0
+2025-06-17T22:55:39.442+07:00  INFO 12836 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Resetting offset for partition paymentCreated-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9094 (id: 3 rack: null)], epoch=0}}.
+2025-06-17T23:37:25.635+07:00  INFO 1132 --- [main] [payment-processing-service,,].s.p.PaymentprocessingserviceApplication : Starting PaymentprocessingserviceApplication using Java 21.0.7 with PID 1132 (D:\Selftaught\Learn\code\webflux-kafka\paymentprocessingservice\target\classes started by Admin in D:\Selftaught\Learn\code\webflux-kafka\paymentprocessingservice)
+2025-06-17T23:37:25.640+07:00  INFO 1132 --- [main] [payment-processing-service,,].s.p.PaymentprocessingserviceApplication : No active profile set, falling back to 1 default profile: "default"
+2025-06-17T23:37:28.214+07:00  INFO 1132 --- [main] [payment-processing-service,,].s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2025-06-17T23:37:28.253+07:00  INFO 1132 --- [main] [payment-processing-service,,].s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 R2DBC repository interfaces.
+2025-06-17T23:37:30.037+07:00  INFO 1132 --- [main] [payment-processing-service,,].s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2025-06-17T23:37:30.134+07:00  INFO 1132 --- [main] [payment-processing-service,,].s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 0 R2DBC repository interfaces.
+2025-06-17T23:37:31.018+07:00  INFO 1132 --- [main] [payment-processing-service,,]o.s.cloud.context.scope.GenericScope     : BeanFactory id=fa822bfc-a857-3f95-a15a-071f21f86d45
+2025-06-17T23:37:33.737+07:00  INFO 1132 --- [main] [payment-processing-service,,]o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-paymentProcessingService-groupId-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = paymentProcessingService-groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-17T23:37:33.987+07:00  INFO 1132 --- [main] [payment-processing-service,,]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-17T23:37:34.254+07:00  INFO 1132 --- [main] [payment-processing-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-17T23:37:34.269+07:00  INFO 1132 --- [main] [payment-processing-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-17T23:37:34.272+07:00  INFO 1132 --- [main] [payment-processing-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1750178254251
+2025-06-17T23:37:34.469+07:00  INFO 1132 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Subscribed to topic(s): paymentCreated
+2025-06-17T23:37:36.238+07:00  INFO 1132 --- [main] [payment-processing-service,,]ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 03043c36-a300-4954-bec6-186d647a2b39
+
+2025-06-17T23:37:39.018+07:00  WARN 1132 --- [main] [payment-processing-service,,]onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webHandler' defined in class path resource [org/springframework/boot/autoconfigure/web/reactive/WebFluxAutoConfiguration$EnableWebFluxConfiguration.class]: Error creating bean with name 'healthEndpointWebFluxHandlerMapping' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointReactiveWebExtensionConfiguration$WebFluxAdditionalHealthEndpointPathsConfiguration.class]: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.reactive.AdditionalHealthEndpointPathsWebFluxHandlerMapping]: Factory method 'healthEndpointWebFluxHandlerMapping' threw exception with message: Error creating bean with name 'healthEndpoint' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: Unsatisfied dependency expressed through method 'healthEndpoint' parameter 0: Error creating bean with name 'healthContributorRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: Unsatisfied dependency expressed through method 'healthContributorRegistry' parameter 3: Error creating bean with name 'r2dbcHealthContributor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/r2dbc/ConnectionFactoryHealthContributorAutoConfiguration.class]: Failed to instantiate [org.springframework.boot.actuate.health.ReactiveHealthContributor]: Factory method 'r2dbcHealthContributor' threw exception with message: Error creating bean with name 'connectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/r2dbc/ConnectionFactoryConfigurations$PoolConfiguration$PooledConnectionFactoryConfiguration.class]: Failed to instantiate [io.r2dbc.pool.ConnectionPool]: Factory method 'connectionFactory' threw exception with message: Failed to determine a suitable R2DBC Connection URL
+2025-06-17T23:37:40.039+07:00  WARN 1132 --- [main] [payment-processing-service,,]z.r.i.AsyncReporter$BoundedAsyncReporter : Timed out waiting for in-flight spans to send
+2025-06-17T23:37:40.053+07:00  INFO 1132 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Cluster ID: FiI5FEofRhae4diqSVEN1Q
+2025-06-17T23:37:40.112+07:00  INFO 1132 --- [main] [payment-processing-service,,].s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-17T23:37:40.114+07:00  INFO 1132 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Discovered group coordinator 127.0.0.1:9093 (id: 2147483645 rack: null)
+2025-06-17T23:37:40.153+07:00  INFO 1132 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] (Re-)joining group
+2025-06-17T23:37:40.162+07:00 ERROR 1132 --- [main] [payment-processing-service,,]o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a ConnectionFactory: 'url' attribute is not specified and no embedded database could be configured.
+
+Reason: Failed to determine a suitable R2DBC Connection URL
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2025-06-17T23:37:40.532+07:00  INFO 1132 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Request joining group due to: need to re-join with the given member-id: consumer-paymentProcessingService-groupId-1-465287c3-57ec-4f1e-b255-0ad05240e247
+2025-06-17T23:37:40.557+07:00  INFO 1132 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] (Re-)joining group
+2025-06-17T23:37:43.567+07:00  INFO 1132 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Successfully joined group with generation Generation{generationId=1, memberId='consumer-paymentProcessingService-groupId-1-465287c3-57ec-4f1e-b255-0ad05240e247', protocol='range'}
+2025-06-17T23:37:43.582+07:00  INFO 1132 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Finished assignment for group at generation 1: {consumer-paymentProcessingService-groupId-1-465287c3-57ec-4f1e-b255-0ad05240e247=Assignment(partitions=[paymentCreated-0])}
+2025-06-17T23:37:43.612+07:00  INFO 1132 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Successfully synced group in generation Generation{generationId=1, memberId='consumer-paymentProcessingService-groupId-1-465287c3-57ec-4f1e-b255-0ad05240e247', protocol='range'}
+2025-06-17T23:37:43.618+07:00  INFO 1132 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Notifying assignor about the new Assignment(partitions=[paymentCreated-0])
+2025-06-17T23:37:43.624+07:00  INFO 1132 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Adding newly assigned partitions: paymentCreated-0
+2025-06-17T23:37:43.647+07:00  INFO 1132 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Found no committed offset for partition paymentCreated-0
+2025-06-17T23:37:43.679+07:00  INFO 1132 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Resetting offset for partition paymentCreated-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9094 (id: 3 rack: null)], epoch=0}}.
+2025-06-17T23:39:53.943+07:00  INFO 1132 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,68519a59e859d3dc2b25b5ac2f39b1ba,2b25b5ac2f39b1ba]c.s.p.event.EventConsumer                : Processing payment ...
+2025-06-17T23:39:59.029+07:00  INFO 1132 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,68519a59e859d3dc2b25b5ac2f39b1ba,2b25b5ac2f39b1ba]o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-06-17T23:39:59.048+07:00  INFO 1132 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,68519a59e859d3dc2b25b5ac2f39b1ba,2b25b5ac2f39b1ba]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-17T23:39:59.067+07:00  INFO 1132 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,68519a59e859d3dc2b25b5ac2f39b1ba,2b25b5ac2f39b1ba]o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-06-17T23:39:59.097+07:00  INFO 1132 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,68519a59e859d3dc2b25b5ac2f39b1ba,2b25b5ac2f39b1ba]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-17T23:39:59.099+07:00  INFO 1132 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,68519a59e859d3dc2b25b5ac2f39b1ba,2b25b5ac2f39b1ba]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-17T23:39:59.110+07:00  INFO 1132 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,68519a59e859d3dc2b25b5ac2f39b1ba,2b25b5ac2f39b1ba]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1750178399097
+2025-06-17T23:39:59.157+07:00  INFO 1132 --- [kafka-producer-network-thread | producer-1] [payment-processing-service,,]org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: FiI5FEofRhae4diqSVEN1Q
+2025-06-17T23:39:59.160+07:00  INFO 1132 --- [kafka-producer-network-thread | producer-1] [payment-processing-service,,]o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 3 with epoch 0
+2025-06-17T23:52:09.994+07:00  INFO 22432 --- [main] [payment-processing-service,,].s.p.PaymentprocessingserviceApplication : Starting PaymentprocessingserviceApplication using Java 21.0.7 with PID 22432 (D:\Selftaught\Learn\code\webflux-kafka\paymentprocessingservice\target\classes started by Admin in D:\Selftaught\Learn\code\webflux-kafka\paymentprocessingservice)
+2025-06-17T23:52:10.004+07:00  INFO 22432 --- [main] [payment-processing-service,,].s.p.PaymentprocessingserviceApplication : No active profile set, falling back to 1 default profile: "default"
+2025-06-17T23:52:12.235+07:00  INFO 22432 --- [main] [payment-processing-service,,].s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2025-06-17T23:52:12.254+07:00  INFO 22432 --- [main] [payment-processing-service,,].s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 R2DBC repository interfaces.
+2025-06-17T23:52:13.698+07:00  INFO 22432 --- [main] [payment-processing-service,,].s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2025-06-17T23:52:13.841+07:00  INFO 22432 --- [main] [payment-processing-service,,].s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 0 R2DBC repository interfaces.
+2025-06-17T23:52:14.816+07:00  INFO 22432 --- [main] [payment-processing-service,,]o.s.cloud.context.scope.GenericScope     : BeanFactory id=fa822bfc-a857-3f95-a15a-071f21f86d45
+2025-06-17T23:52:18.581+07:00  INFO 22432 --- [main] [payment-processing-service,,]o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-paymentProcessingService-groupId-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = paymentProcessingService-groupId
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-06-17T23:52:18.941+07:00  INFO 22432 --- [main] [payment-processing-service,,]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-17T23:52:19.675+07:00  INFO 22432 --- [main] [payment-processing-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-17T23:52:19.679+07:00  INFO 22432 --- [main] [payment-processing-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-17T23:52:19.680+07:00  INFO 22432 --- [main] [payment-processing-service,,]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1750179139673
+2025-06-17T23:52:19.824+07:00  INFO 22432 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Subscribed to topic(s): paymentCreated
+2025-06-17T23:52:21.525+07:00  INFO 22432 --- [main] [payment-processing-service,,]ctiveUserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e31052b9-118f-4316-a051-341ceae34efc
+
+2025-06-17T23:52:23.637+07:00  INFO 22432 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Cluster ID: FiI5FEofRhae4diqSVEN1Q
+2025-06-17T23:52:23.983+07:00  INFO 22432 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Discovered group coordinator 127.0.0.1:9093 (id: 2147483645 rack: null)
+2025-06-17T23:52:24.227+07:00  INFO 22432 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] (Re-)joining group
+2025-06-17T23:52:25.303+07:00  INFO 22432 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Request joining group due to: need to re-join with the given member-id: consumer-paymentProcessingService-groupId-1-1553017d-34a1-43ec-9e66-d1325e68a70c
+2025-06-17T23:52:25.523+07:00  WARN 22432 --- [main] [payment-processing-service,,]onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'webHandler' defined in class path resource [org/springframework/boot/autoconfigure/web/reactive/WebFluxAutoConfiguration$EnableWebFluxConfiguration.class]: Error creating bean with name 'healthEndpointWebFluxHandlerMapping' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointReactiveWebExtensionConfiguration$WebFluxAdditionalHealthEndpointPathsConfiguration.class]: Failed to instantiate [org.springframework.boot.actuate.endpoint.web.reactive.AdditionalHealthEndpointPathsWebFluxHandlerMapping]: Factory method 'healthEndpointWebFluxHandlerMapping' threw exception with message: Error creating bean with name 'healthEndpoint' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: Unsatisfied dependency expressed through method 'healthEndpoint' parameter 0: Error creating bean with name 'healthContributorRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/health/HealthEndpointConfiguration.class]: Unsatisfied dependency expressed through method 'healthContributorRegistry' parameter 3: Error creating bean with name 'r2dbcHealthContributor' defined in class path resource [org/springframework/boot/actuate/autoconfigure/r2dbc/ConnectionFactoryHealthContributorAutoConfiguration.class]: Failed to instantiate [org.springframework.boot.actuate.health.ReactiveHealthContributor]: Factory method 'r2dbcHealthContributor' threw exception with message: Error creating bean with name 'connectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/r2dbc/ConnectionFactoryConfigurations$PoolConfiguration$PooledConnectionFactoryConfiguration.class]: Failed to instantiate [io.r2dbc.pool.ConnectionPool]: Factory method 'connectionFactory' threw exception with message: Failed to determine a suitable R2DBC Connection URL
+2025-06-17T23:52:26.132+07:00  INFO 22432 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] (Re-)joining group
+2025-06-17T23:52:27.204+07:00  WARN 22432 --- [main] [payment-processing-service,,]z.r.i.AsyncReporter$BoundedAsyncReporter : Timed out waiting for in-flight spans to send
+2025-06-17T23:52:27.274+07:00  INFO 22432 --- [main] [payment-processing-service,,].s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-06-17T23:52:27.364+07:00 ERROR 22432 --- [main] [payment-processing-service,,]o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a ConnectionFactory: 'url' attribute is not specified and no embedded database could be configured.
+
+Reason: Failed to determine a suitable R2DBC Connection URL
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2025-06-17T23:52:29.265+07:00  INFO 22432 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Successfully joined group with generation Generation{generationId=3, memberId='consumer-paymentProcessingService-groupId-1-1553017d-34a1-43ec-9e66-d1325e68a70c', protocol='range'}
+2025-06-17T23:52:29.298+07:00  INFO 22432 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Finished assignment for group at generation 3: {consumer-paymentProcessingService-groupId-1-1553017d-34a1-43ec-9e66-d1325e68a70c=Assignment(partitions=[paymentCreated-0])}
+2025-06-17T23:52:29.382+07:00  INFO 22432 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Successfully synced group in generation Generation{generationId=3, memberId='consumer-paymentProcessingService-groupId-1-1553017d-34a1-43ec-9e66-d1325e68a70c', protocol='range'}
+2025-06-17T23:52:29.478+07:00  INFO 22432 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Notifying assignor about the new Assignment(partitions=[paymentCreated-0])
+2025-06-17T23:52:29.505+07:00  INFO 22432 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Adding newly assigned partitions: paymentCreated-0
+2025-06-17T23:52:29.580+07:00  INFO 22432 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Found no committed offset for partition paymentCreated-0
+2025-06-17T23:52:29.658+07:00  INFO 22432 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,,]o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-paymentProcessingService-groupId-1, groupId=paymentProcessingService-groupId] Resetting offset for partition paymentCreated-0 to position FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[127.0.0.1:9094 (id: 3 rack: null)], epoch=0}}.
+2025-06-17T23:53:33.869+07:00  INFO 22432 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,68519d8d2ac37b96f1f20a25b6678e3c,f1f20a25b6678e3c]c.s.p.event.EventConsumer                : Processing payment ...
+2025-06-17T23:53:38.921+07:00  INFO 22432 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,68519d8d2ac37b96f1f20a25b6678e3c,f1f20a25b6678e3c]o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2025-06-17T23:53:38.938+07:00  INFO 22432 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,68519d8d2ac37b96f1f20a25b6678e3c,f1f20a25b6678e3c]o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-06-17T23:53:38.956+07:00  INFO 22432 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,68519d8d2ac37b96f1f20a25b6678e3c,f1f20a25b6678e3c]o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-06-17T23:53:38.976+07:00  INFO 22432 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,68519d8d2ac37b96f1f20a25b6678e3c,f1f20a25b6678e3c]o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-06-17T23:53:38.977+07:00  INFO 22432 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,68519d8d2ac37b96f1f20a25b6678e3c,f1f20a25b6678e3c]o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-06-17T23:53:38.979+07:00  INFO 22432 --- [reactive-kafka-paymentProcessingService-groupId-1] [payment-processing-service,68519d8d2ac37b96f1f20a25b6678e3c,f1f20a25b6678e3c]o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1750179218976
+2025-06-17T23:53:38.993+07:00  INFO 22432 --- [kafka-producer-network-thread | producer-1] [payment-processing-service,,]org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: FiI5FEofRhae4diqSVEN1Q
+2025-06-17T23:53:38.995+07:00  INFO 22432 --- [kafka-producer-network-thread | producer-1] [payment-processing-service,,]o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 5 with epoch 0

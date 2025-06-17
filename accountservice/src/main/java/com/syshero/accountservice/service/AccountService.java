@@ -17,6 +17,7 @@ public class AccountService {
     AccountRepository accountRepository;
 
     public Mono<AccountDTO> createNewAccount(AccountDTO accountDTO) {
+        // log.info("Creating new account for email: {}", accountDTO.getEmail());
         return Mono.just(accountDTO)
                 .map(AccountDTO::dtoToEntity)
                 .flatMap(account -> accountRepository.save(account))
@@ -25,6 +26,7 @@ public class AccountService {
     }
 
     public Mono<AccountDTO> checkBalance(String id) {
+        log.info("Checking balance for account ID: {}", id);
         return findById(id);
     }
 

@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.syshero.commonservice.utils.Constant;
 import com.syshero.profileservice.model.ProfileDTO;
 import com.syshero.profileservice.service.ProfileService;
+import io.micrometer.tracing.Tracer;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,13 +22,17 @@ public class EventConsumer {
     @Autowired
     ProfileService profileService;
     
+    @Autowired
+    private Tracer tracer;
+
     public EventConsumer(ReceiverOptions<String, String> receiverOptions){
         KafkaReceiver.create(receiverOptions.subscription(Collections.singleton(Constant.PROFILE_ONBOARDED_TOPIC)))
                 .receive().subscribe(this::profileOnboarded);
     }
     
     public void profileOnboarded(ReceiverRecord<String,String> receiverRecord){
-        try {
+        // Tạo span mới cho mỗi event
+        try (Tracer.SpanInScope ws = tracer.withSpan(tracer.nextSpan().name("kafka-profileOnboarded").start())) {
             log.info("Received Profile Onboarded event: key={}, value={}", receiverRecord.key(), receiverRecord.value());
             ProfileDTO dto = gson.fromJson(receiverRecord.value(), ProfileDTO.class);
             profileService.updateStatusProfile(dto)

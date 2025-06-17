@@ -39,17 +39,25 @@
         </encoder>
     </appender>
 
-    <!-- Logger for REST API layer -->
+    <!-- Controller Logger -->
     <logger name="com.syshero.accountservice.controller" level="INFO" additivity="false">
         <appender-ref ref="LOKI" />
+        <appender-ref ref="CONSOLE" />
     </logger>
 
-    <!-- Logger for Kafka (producer/consumer) -->
+    <!-- Service Logger -->
+    <logger name="com.syshero.accountservice.service" level="INFO" additivity="false">
+        <appender-ref ref="LOKI" />
+        <appender-ref ref="CONSOLE" />
+    </logger>
+
+    <!-- Kafka Event Logger -->
     <logger name="com.syshero.accountservice.event" level="INFO" additivity="false">
         <appender-ref ref="LOKI" />
+        <appender-ref ref="CONSOLE" />
     </logger>
 
-    <!-- Root logger sends logs to console only -->
+    <!-- Các log khác (ví dụ thư viện, system...) chỉ log ra console -->
     <root level="INFO">
         <appender-ref ref="CONSOLE" />
     </root>
